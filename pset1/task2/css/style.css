@@ -1,3 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body{
 	font-family:  Arial, Helvetica, sans-serif;
+	width: 1280;	
+}
+
+.div-wrapper__header{
+	background-color: white;
+	margin-top: -9.3px;
+}
+.div-wrapper__header__div-logo__font{	
+	padding-left: 21px;
+	font-size: 49pt;
+}
+
+.div-wrapper__header__div-logo{
+	font-weight:bold; 
+
+}
+.div-wrapper__header__div-logo--green-font{
+	color: #1abc9c;
+	font-size: 48pt;
+	margin-left: -8pt;
 }
