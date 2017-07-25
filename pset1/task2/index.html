@@ -115,26 +115,46 @@
 			 </div>
 			 <br>
 			 <div class="div-wrapper__footer__form__text-quality__wrapper">
-				  <span class="div-wrapper__footer__form__text-quality">Quality:</span>
+				 <span class="div-wrapper__footer__form__text-quality">Quality:</span>
 	 			 <input type="number" name="quality" min="0" max="100" step="10" value="90"
 	 			 class="div-wrapper__footer__form__input-quality">
  			 </div>
  			 <br>
-			 <input type="checkbox" name="chbx" value="yes" 
-			 class="div-wrapper__footer__form__input-checkbox">If you have any questions<br>
+ 			 <div class="div-wrapper__footer__form__text-week__wrapper">
+	 			 <span class="div-wrapper__footer__form__text-week">Select a week:</span>
+	 			 <input type="week" name="week_year" 
+	 			 class="div-wrapper__footer__form__input-week">
+ 			 </div>
+ 			 <br>
+ 			 <div class="div-wrapper__footer__form__text-time__wrapper">			 
+				 <span class="div-wrapper__footer__form__text-time">Select a time:</span>
+	 			 <input type="time" name="usr_time" class="div-wrapper__footer__form__input-time">
+ 			</div>
+ 			<br>
+			<div class="div-wrapper__footer__form__text-quantity__wrapper">
+	 			  <span class="div-wrapper__footer__form__text-quantity">Quantity (between 1 and 5):
+	 			  </span>
+	  			 <input type="number" name="quantity" min="1" max="5" class="div-wrapper__footer__form__input-quantity">
+  			 </div>
+  			 <input type="checkbox" name="chbx" value="yes" 
+			 class="div-wrapper__footer__form__input-checkbox">
+				 <span class="div-wrapper__footer__form__input-checkbox__text">
+				 If you have any questions
+				 </span>
+			 <br>
 			 <input type="radio" name="gender" value="male" checked 
-			 class="div-wrapper__footer__form__input-radio1">If you are male<br>
+			 class="div-wrapper__footer__form__input-radio1">
+				 <span class="div-wrapper__footer__form__input-radio1__text">
+				 If you do something
+				 </span>
+			 <br>
  			 <input type="radio" name="gender" value="female"
- 			 class="div-wrapper__footer__form__input-radio2">If you are female<br>
- 			 <span class="div-wrapper__footer__form__text-week">Select a week:</span>
- 			 <input type="week" name="week_year" 
- 			 class="div-wrapper__footer__form__input-week"><br>			 
-			 <span class="div-wrapper__footer__form__text-time">Select a time:</span>
- 			 <input type="time" name="usr_time" class="div-wrapper__footer__form__input-time"><br>
- 			  <span class="div-wrapper__footer__form__text-quantity">Quantity (between 1 and 5):
- 			  </span>
-  			 <input type="number" name="quantity" min="1" max="5" class="div-wrapper__footer__form__input-quantity"><br>
-			 <input type="reset" class="div-wrapper__footer__form__input-reset"><br>
+ 			 class="div-wrapper__footer__form__input-radio2">
+	 			 <span class="div-wrapper__footer__form__input-radio2__text">
+	 			 If you do not do something
+	 			 </span>
+ 			 <br>
+			 <input type="reset" class="div-wrapper__footer__form__input-reset" value="reset">
 			 <input type="Submit" value="Send email!" 
 			 class="div-wrapper__footer__form__input-submit">
 		</form>		
