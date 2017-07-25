@@ -3,31 +3,142 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>nplusplus</title>
-	
+	<meta name="description" content="test landing page">
+    <meta name="author" content="sergkol557">
+	<title>nplusplus</title>	
 	<link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-<div class="div-wrapper container">
+<div class="div-wrapper">
 	<header class="div-wrapper__header">
 		<div class="div-wrapper__header__div-logo">
-			<font class="div-wrapper__header__div-logo__font">
+			<span class="div-wrapper__header__div-logo__font">
 			N
-			</font>
-			<font class="div-wrapper__header__div-logo--green-font">
+			</span>
+			<span class="div-wrapper__header__div-logo--green-font">
 			++
-			</font>		
+			</span>
+				<a href="#" class="div-wrapper__header__a div-wrapper__header__a--pos1">CONTACT US</a>
+				<a href="#" class="div-wrapper__header__a div-wrapper__header__a--pos2">ABOUT US</a>
+				<a href="#" class="div-wrapper__header__a div-wrapper__header__a--pos3">PRODUCTS</a>
 		</div>	
 	</header>
-	<div class="div-wrapper__div-content">		
+	<div class="div-wrapper__div-content">
+		<div class="div-wrapper__div-content__image">
+			<img src="images/iphone.png" height="455" width="455">	
+		</div>
+		<div class="div-wrapper__div-content__text">
+			<p class="div-wrapper__div-content__text__header">
+				Our awesome app is ready to use!
+			</p>
+			<p class="div-wrapper__div-content__text__header__article" align="justify">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae ipsum voluptatem laboriosam quisquam velit molestiae voluptate. Dolores necessitatibus praesentium porro, doloremque magni voluptates itaque labore error!
+			</p>
+			<div class="div-wrapper__div-content__text__header__btn">
+				<button class="div-wrapper__div-content__text__header__buy-btn">Buy now!</button>
+			</div>			
+		</div>	
 	</div>
-	<footer class="div-wrapper__footer">		
+	<div class="div-wrapper__div-content__articles">	
+		<div class="div-wrapper__div-content__article1">
+			<div class="div-wrapper__div-content__article1__ico">&lt;/&gt;</div>
+			<div class="div-wrapper__div-content__article1__header">
+				Web development
+			</div>
+			<div class="div-wrapper__div-content__article1__text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis provident a corporis neque sapiente earum harum quos debitis hic, eveniet quod obcaecati quisquam, aspernatur architecto culpa aperiam!
+			</div>			
+		</div>	
+		<div class="div-wrapper__div-content__article2">
+			<div class="div-wrapper__div-content__article2__ico">
+				<i class="fa fa-android fa-3x fa-fw" aria-hidden="true"></i>
+			</div>
+			<div class="div-wrapper__div-content__article2__header">
+				Mobile development
+			</div>
+			<div class="div-wrapper__div-content__article2__text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel facere minima placeat nemo veniam fugiat tempore dolores, non, consequatur voluptas aliquam similique debitis voluptatibus ab, aspernatur est!
+			</div>			
+		</div>	
+		<div class="div-wrapper__div-content__article3">
+			<div class="div-wrapper__div-content__article3__ico">
+				<i class="fa fa-cloud fa-3x fa-fw" aria-hidden="true"></i>
+			</div>
+			<div class="div-wrapper__div-content__article3__header">
+				Hightload
+			</div>
+			<div class="div-wrapper__div-content__article3__text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ut! Voluptates culpa dignissimos deserunt mollitia, facere, dicta, laborum magni vel officia tempore labore impedit placeat at modi?
+			</div>			
+		</div>	
+	</div>
+	<footer class="div-wrapper__footer">
+		<div class="div-wrapper__footer__header">
+			Contact us!
+		</div>
+		<form action="index.php" method="POST" class="div-wrapper__footer__form">
+			 <input type="text" name="name" placeholder="Type here your name, please" 
+			 class="div-wrapper__footer__form__input-name">
+			 <br>
+			 <input type="email" name="email" placeholder="Type here your email, please"
+			 class="div-wrapper__footer__form__input-email">
+			 <br>
+			 <input type="tel" name="usrtel" placeholder="Type here your phone, please"
+			 class="div-wrapper__footer__form__input-phone">
+			 <br>
+			 <textarea rows="4" cols="45" name="text" placeholder="Ask your question" 
+			 class="div-wrapper__footer__form__input-textarea"></textarea>
+			 <br>
+			 <input type="password" name="psw" placeholder="Type here your password, please"
+			 class="div-wrapper__footer__form__input-pas">
+			 <br>
+			 <input type="url" name="homepage" placeholder="Type here your homepage, please"
+			 class="div-wrapper__footer__form__input-page">
+			 <br>
+			 <input type="search" name="googlesearch" placeholder="Type here your search, please"
+			 class="div-wrapper__footer__form__input-search">
+			 <br>
+			 <div class="div-wrapper__footer__form__text-questions__wrapper">
+				 <span class="div-wrapper__footer__form__text-questions">Questions:</span>
+				 <input type="range" name="questions" min="0" max="10" 
+				 class="div-wrapper__footer__form__input-range">				 
+			 </div>
+			 <br>
+			 <div class="div-wrapper__footer__form__text-bdaytime__wrapper">
+				 <span class="div-wrapper__footer__form__text-bdaytime">Type here your birthday, please
+				 </span>			 
+				 <input type="datetime-local" name="bdaytime" 
+				 class="div-wrapper__footer__form__input-bdaytime">
+			 </div>
+			 <br>
+			 <div class="div-wrapper__footer__form__text-quality__wrapper">
+				  <span class="div-wrapper__footer__form__text-quality">Quality:</span>
+	 			 <input type="number" name="quality" min="0" max="100" step="10" value="90"
+	 			 class="div-wrapper__footer__form__input-quality">
+ 			 </div>
+ 			 <br>
+			 <input type="checkbox" name="chbx" value="yes" 
+			 class="div-wrapper__footer__form__input-checkbox">If you have any questions<br>
+			 <input type="radio" name="gender" value="male" checked 
+			 class="div-wrapper__footer__form__input-radio1">If you are male<br>
+ 			 <input type="radio" name="gender" value="female"
+ 			 class="div-wrapper__footer__form__input-radio2">If you are female<br>
+ 			 <span class="div-wrapper__footer__form__text-week">Select a week:</span>
+ 			 <input type="week" name="week_year" 
+ 			 class="div-wrapper__footer__form__input-week"><br>			 
+			 <span class="div-wrapper__footer__form__text-time">Select a time:</span>
+ 			 <input type="time" name="usr_time" class="div-wrapper__footer__form__input-time"><br>
+ 			  <span class="div-wrapper__footer__form__text-quantity">Quantity (between 1 and 5):
+ 			  </span>
+  			 <input type="number" name="quantity" min="1" max="5" class="div-wrapper__footer__form__input-quantity"><br>
+			 <input type="reset" class="div-wrapper__footer__form__input-reset"><br>
+			 <input type="Submit" value="Send email!" 
+			 class="div-wrapper__footer__form__input-submit">
+		</form>		
 	</footer>
-</div>
-<link rel="javascript" src="bootstrap-4.0.0-alpha.6-dist/js/jquery.js">
-<link rel="javascript" src="bootstrap-4.0.0-alpha.6-dist/js/jquery.min.js">	
+</div>	
 </body>
 </html>
