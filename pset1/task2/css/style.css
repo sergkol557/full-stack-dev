@@ -17,8 +17,8 @@ body{
 }
 
 .header__logo__font{
-	padding-left: 153px;
-	font-size: 69pt;
+	padding-left: 157px;
+	font-size: 70pt;
 	color: black;
 }
 
@@ -46,7 +46,7 @@ body{
 }
 
 .header__a--pos1{
-	margin-right: 153px;
+	margin-right: 158px;
 }
 
 .header__a--pos2{
@@ -54,7 +54,7 @@ body{
 }
 
 .header__a--pos3{
-	margin-right: 95px;
+	margin-right: 97px;
 }
 
 .content{	
@@ -72,7 +72,7 @@ body{
 
 .content__text{
 	color: white;
-	padding-left: 959px;
+	padding-left: 963px;
 }
 
 .content__text__header{
@@ -110,8 +110,8 @@ body{
 
 .content__article1{
 	float: left;
-	width: 545px;
-	margin-left: 148px;
+	width: 544px;
+	margin-left: 152px;
 }
 
 .content__article1__ico{
@@ -139,13 +139,14 @@ body{
 .content__article1__text{
 	text-align: center;
 	margin-top: 26px;
-	font-size: 18pt;
-	line-height: 1.47;
+	font-size: 17.5pt;
+	line-height: 1.54;
 }
 
 .content__article2{
 	float: left;
-	width: 545px;
+	width: 544px;
+	margin-left: -10px;
 }
 
 .content__article2__ico{
@@ -153,9 +154,9 @@ body{
 	height: 125px;
 	width: 125px;
 	border-radius: 50%;
-	margin-left: 197px;
+	margin-left: 209px;
 	color: white;	
-	font-size:4em;
+	font-size: 4em;
 }
 
 .ico{
@@ -167,20 +168,20 @@ body{
 	text-align: center;
 	font-weight: bold;
 	margin-top: 27px;
-	font-size: 21pt;
-	margin-left: -18px;
+	font-size: 21pt;	
 }
 
 .content__article2__text{
 	text-align: center;
 	margin-top: 26px;
-	font-size: 18pt;
-	line-height: 1.47;
+	font-size: 17.5pt;
+	line-height: 1.54;
 }
 
 .content__article3{
 	float: left;
-	width: 545px;
+	width: 544px;
+	margin-left: -10px;
 }
 
 .content__article3__ico{
@@ -188,9 +189,9 @@ body{
 	height: 125px;
 	width: 125px;
 	border-radius: 50%;
-	margin-left: 190px;
+	margin-left: 210px;
 	color: white;	
-	font-size:4em;
+	font-size: 4em;
 }
 
 .content__article3__header{
@@ -198,14 +199,13 @@ body{
 	font-weight: bold;
 	margin-top: 27px;
 	font-size: 21pt;
-	margin-left: -39px;
 }
 
 .content__article3__text{
 	text-align: center;
 	margin-top: 26px;
-	line-height: 1.47;
-	font-size: 18pt;
+	line-height: 1.54;
+	font-size: 17.5pt;
 }
 
 .footer{
@@ -216,68 +216,68 @@ body{
 .footer__header{
 	color: white;
 	font-weight: bold;
-	padding-top: 89px;
+	padding-top: 90px;
 	padding-left: 44%;
 	font-size: 35pt;
 }
 
 .footer__form{
 	margin-top: 73px;
-	margin-left: 27.2%;
+	margin-left: 27.4%;
 }
 
 .footer__form__input-name{
 	font-size: 21.3pt;
-	padding-left: 10px;
-	width: 868px;
+	padding-left: 14px;
+	width: 866px;
 	height: 43px;
 }
 
 .footer__form__input-email{
 	font-size: 21.3pt;
-	padding-left: 10px;
-	width: 868px;
+	padding-left: 14px;
+	width: 866px;
 	height: 43px;
 	margin-top: 13px;
 }
 
 .footer__form__input-phone{
 	font-size: 21.3pt;
-	padding-left: 10px;
-	width: 868px;
+	padding-left: 14px;
+	width: 866px;
 	height: 43px;
 	margin-top: 13px;
 }
 
 .footer__form__input-textarea{
     margin-top: 13px;
-    width: 865px;
+    width: 864px;
     font-size: 21.3pt;
     padding-left: 16px;
     height: 168px;
-    padding-top: 6px;
+    padding-top: 4px;
 }
 
 .footer__form__input-pas{
 	font-size: 21.3pt;
-	padding-left: 10px;
-	width: 868px;
+	padding-left: 14px;
+	width: 866px;
 	height: 43px;
 	margin-top: 13px;
 }
 
 .footer__form__input-page{
 	font-size: 21.3pt;
-	padding-left: 10px;
-	width: 868px;
+	padding-left: 14px;
+	width: 866px;
 	height: 43px;
 	margin-top: 13px;
 }
 
 .footer__form__input-search{
 	font-size: 21.3pt;
-	padding-left: 10px;
-	width: 883px;
+	padding-left: 14px;
+	width: 884px;
 	height: 52px;
 	margin-top: 13px;
 }
@@ -289,12 +289,12 @@ body{
 .footer__form__text-questions{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 43px;
 }
 
 .footer__form__input-range{
-	width: 730px;
+	width: 728px;
 }
 
 .footer__form__text-bdaytime__wrapper{
@@ -304,11 +304,11 @@ body{
 .footer__form__text-bdaytime{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 }
 
 .footer__form__input-bdaytime{
-	width: 466px;
+	width: 464px;
 	text-align: right;
 	height: 43px;
 	font-size: 21.3pt;
@@ -321,12 +321,12 @@ body{
 .footer__form__text-quality{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 43px;
 }
 
 .footer__form__input-quality{
-	width: 770px;
+	width: 768px;
 	text-align: right;
 	height: 43px;
 	font-size: 21.3pt;
@@ -339,12 +339,12 @@ body{
 .footer__form__text-week{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 43px;
 }
 
 .footer__form__input-week{
-	width: 681px;
+	width: 679px;
 	text-align: right;
 	height: 43px;
 	font-size: 21.3pt;
@@ -357,12 +357,12 @@ body{
 .footer__form__text-time{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 343px;
 }
 
 .footer__form__input-time{
-	width: 695px;
+	width: 693px;
 	text-align: right;
 	height: 43px;
 	font-size: 21.3pt;
@@ -375,12 +375,12 @@ body{
 .footer__form__text-quantity{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 43px;
 }
 
 .footer__form__input-quantity{
-	width: 515px;
+	width: 513px;
 	text-align: right;
 	height: 43px;
 	font-size: 21.3pt;
@@ -393,7 +393,7 @@ body{
 .footer__form__input-checkbox__text{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 43px;
 }
 
@@ -408,7 +408,7 @@ body{
 .footer__form__input-radio1__text{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 43px;
 }
 
@@ -419,7 +419,7 @@ body{
 .footer__form__input-radio2__text{
 	color: white;
 	font-size: 21.3pt;
-	padding-left: 10px;
+	padding-left: 14px;
 	height: 43px;
 }
 
