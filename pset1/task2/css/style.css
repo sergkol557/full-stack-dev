@@ -2,17 +2,14 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.wrapper{
-	width: 1280px;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+.wrapper{	
+	padding: 0;
+	margin: 0;
 }
 
 .header{
 	background-color: white;
-	margin-top: -4px;
-	height: 56px;
+	height: 72px;
 }
 
 .header__logo__a{
@@ -20,23 +17,25 @@ body{
 }
 
 .header__logo__font{
-	padding-left: 104px;
-	font-size: 49pt;
+	padding-left: 153px;
+	font-size: 69pt;
 	color: black;
 }
 
 .header__logo{
 	font-weight: bold;
+	margin-top: -3px;
 }
 
 .header__logo--green-font{
 	color: #1abc9c;
-	font-size: 48pt;
-	margin-left: -8pt;
+	font-size: 70pt;
+	margin-left: -10pt;
 }
 
 .header__navigation{
-	margin-top: -83px;
+	margin-top: -104px;
+	font-size: 18pt;
 }
 
 .header__a{
@@ -47,157 +46,166 @@ body{
 }
 
 .header__a--pos1{
-	margin-right: 106px;
+	margin-right: 153px;
 }
 
 .header__a--pos2{
-	margin-right: 61.5px;
+	margin-right: 86px;
 }
 
 .header__a--pos3{
-	margin-right: 67px;
+	margin-right: 95px;
 }
 
-.content{
-	margin-top: -5px;
+.content{	
 	background-color: #1abc9c;
-	height: 555px;
+	height: 815px;
 	clear: both;
+	margin: 0px -4px;
 }
 
 .content__image{
-	padding-top: 55px;
-	padding-left: 60px;
+	padding-top: 75px;
+	padding-left: 82px;
 	float: left;
 }
 
 .content__text{
 	color: white;
-	padding-left: 651px;
+	padding-left: 959px;
 }
 
 .content__text__header{
-	padding-top: 125px;
-	font-size: 24pt;
+	padding-top: 185px;
+	font-size: 35pt;
 	font-weight: bold;
 }
 
 .content__text__article{
-	padding-top: 19px;
-	line-height: 1.4;
-	padding-right: 85px;
+	padding-top: 26px;
+	line-height: 1.3;
+	font-size: 20pt;
+	margin-right: 124px;
 }
 
 .content__text__btn{
-	padding-top: 34px;
+	padding-top: 42px;
 }
 
 .content__text__buy-btn{
-	width: 141px;
+	width: 208px;
 	border: 2px solid white;
 	color: white;
 	background-color: #1abc9c;
-	height: 50px;
+	height: 75px;
 	border-radius: 5px;
-	font-size: 18pt;
+	font-size: 26pt;
 	cursor: pointer;
 }
 
 .content__articles{
-	margin-top: 60px;
-	height: 340px;
+	margin-top: 89px;
+	height: 498px;
 }
 
 .content__article1{
 	float: left;
-	width: 365px;
-	margin-left: 104px;
+	width: 545px;
+	margin-left: 148px;
 }
 
 .content__article1__ico{
 	background-color: #1abc9c;
-	height: 85px;
-	width: 85px;
+	height: 125px;
+	width: 125px;
 	border-radius: 50%;
-	margin-left: 141px;
+	margin-left: 209px;
 	color: white;
-	font-size: 29pt;
+	font-size: 50pt;
 }
 
 .content__article1__ico__font{
-	padding-top: 20px;
+	padding-top: 26px;
 	padding-left: 14px;
 }
 
 .content__article1__header{
 	text-align: center;
 	font-weight: bold;
-	margin-top: 17px;
-	font-size: 14pt;
+	margin-top: 27px;
+	font-size: 21pt;
 }
 
 .content__article1__text{
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 26px;
+	font-size: 18pt;
+	line-height: 1.47;
 }
 
 .content__article2{
 	float: left;
-	width: 365px;
+	width: 545px;
 }
 
 .content__article2__ico{
 	background-color: #1abc9c;
-	height: 85px;
-	width: 85px;
+	height: 125px;
+	width: 125px;
 	border-radius: 50%;
-	color: white;
-	margin-left: 138px;
-	font-size:2.6em;
+	margin-left: 197px;
+	color: white;	
+	font-size:4em;
 }
 
 .ico{
-	padding-top: 20px;
-	padding-left: 17px;
+	padding-top: 28px;
+	padding-left: 22px;
 }
 
 .content__article2__header{
 	text-align: center;
 	font-weight: bold;
-	margin-top: 17px;
-	font-size: 14pt;
+	margin-top: 27px;
+	font-size: 21pt;
+	margin-left: -18px;
 }
 
 .content__article2__text{
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 26px;
+	font-size: 18pt;
+	line-height: 1.47;
 }
 
 .content__article3{
 	float: left;
-	width: 365px;
+	width: 545px;
 }
 
 .content__article3__ico{
 	background-color: #1abc9c;
-	height: 85px;
-	width: 85px;
+	height: 125px;
+	width: 125px;
 	border-radius: 50%;
-	color: white;
-	margin-left: 138px;
-	font-size:2.6em;
+	margin-left: 190px;
+	color: white;	
+	font-size:4em;
 }
 
 .content__article3__header{
 	text-align: center;
 	font-weight: bold;
-	margin-top: 19px;
-	font-size: 14pt;
+	margin-top: 27px;
+	font-size: 21pt;
+	margin-left: -39px;
 }
 
 .content__article3__text{
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 26px;
+	line-height: 1.47;
+	font-size: 18pt;
 }
 
 .footer{
@@ -208,228 +216,235 @@ body{
 .footer__header{
 	color: white;
 	font-weight: bold;
-	padding-top: 60px;
+	padding-top: 89px;
 	padding-left: 44%;
-	font-size: 24pt;
+	font-size: 35pt;
 }
 
 .footer__form{
-	margin-top: 47px;
-	margin-left: 27.4%;
+	margin-top: 73px;
+	margin-left: 27.2%;
 }
 
 .footer__form__input-name{
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	width: 588px;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	width: 868px;
+	height: 43px;
 }
 
 .footer__form__input-email{
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	width: 588px;
-	height: 30px;
-	margin-top: 6px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	width: 868px;
+	height: 43px;
+	margin-top: 13px;
 }
 
 .footer__form__input-phone{
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	width: 588px;
-	height: 30px;
-	margin-top: 6px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	width: 868px;
+	height: 43px;
+	margin-top: 13px;
 }
 
 .footer__form__input-textarea{
-	margin-top: 6px;
-	width: 588px;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 116px;
+    margin-top: 13px;
+    width: 865px;
+    font-size: 21.3pt;
+    padding-left: 16px;
+    height: 168px;
+    padding-top: 6px;
 }
 
 .footer__form__input-pas{
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	width: 588px;
-	height: 30px;
-	margin-top: 6px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	width: 868px;
+	height: 43px;
+	margin-top: 13px;
 }
 
 .footer__form__input-page{
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	width: 588px;
-	height: 30px;
-	margin-top: 6px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	width: 868px;
+	height: 43px;
+	margin-top: 13px;
 }
 
 .footer__form__input-search{
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	width: 602px;
-	height: 35px;
-	margin-top: 6px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	width: 883px;
+	height: 52px;
+	margin-top: 13px;
 }
 
 .footer__form__text-questions__wrapper{
-	margin-top: 6px;
+	margin-top: 13px;
 }
 
 .footer__form__text-questions{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 37px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 43px;
 }
 
 .footer__form__input-range{
-	width: 494px;
+	width: 730px;
 }
 
 .footer__form__text-bdaytime__wrapper{
-	margin-top: 6px;
+	margin-top: 13px;
 }
 
 .footer__form__text-bdaytime{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
+	font-size: 21.3pt;
+	padding-left: 10px;
 }
 
 .footer__form__input-bdaytime{
-	width: 317px;
+	width: 466px;
 	text-align: right;
-	height: 30px;
+	height: 43px;
+	font-size: 21.3pt;
 }
 
 .footer__form__text-quality__wrapper{
-	margin-top: 6px;
+	margin-top: 13px;
 }
 
 .footer__form__text-quality{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 43px;
 }
 
 .footer__form__input-quality{
-	width: 521px;
+	width: 770px;
 	text-align: right;
-	height: 30px;
+	height: 43px;
+	font-size: 21.3pt;
 }
 
 .footer__form__text-week__wrapper{
-	margin-top: 6px;
+	margin-top: 13px;
 }
 
 .footer__form__text-week{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 43px;
 }
 
 .footer__form__input-week{
-	width: 462px;
+	width: 681px;
 	text-align: right;
-	height: 30px;
+	height: 43px;
+	font-size: 21.3pt;
 }
 
 .footer__form__text-time__wrapper{
-	margin-top: 6px;
+	margin-top: 13px;
 }
 
 .footer__form__text-time{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 343px;
 }
 
 .footer__form__input-time{
-	width: 470px;
+	width: 695px;
 	text-align: right;
-	height: 30px;
+	height: 43px;
+	font-size: 21.3pt;
 }
 
 .footer__form__text-quantity__wrapper{
-	margin-top: 6px;
+	margin-top: 13px;
 }
 
 .footer__form__text-quantity{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 43px;
 }
 
 .footer__form__input-quantity{
-	width: 351px;
+	width: 515px;
 	text-align: right;
-	height: 30px;
+	height: 43px;
+	font-size: 21.3pt;
 }
 
 .footer__form__input-checkbox{
-	margin-top: 11px;
+	margin-top: 13px;
 }
 
 .footer__form__input-checkbox__text{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 43px;
 }
 
 .footer__form__input-checkbox_radio{
-	margin-top: 6px;
+	margin-top: 13px;
 }
 
 .footer__form__input-radio1{
-	margin-top: 11px;
+	margin-top: 13px;
 }
 
 .footer__form__input-radio1__text{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 43px;
 }
 
 .footer__form__input-radio2{
-	margin-top: 11px; 
+	margin-top: 13px; 
 }
 
 .footer__form__input-radio2__text{
 	color: white;
-	font-size: 14.5pt;
-	padding-left: 7pt;
-	height: 30px;
+	font-size: 21.3pt;
+	padding-left: 10px;
+	height: 43px;
 }
 
 .footer__form__input-reset{
-	margin-top: 60px;
+	margin-top: 88px;
 	background-color: #16a085;
-	width: 248px;
-	border: 2px solid white;
+	width: 365px;
+	border: 3px solid white;
 	color: white;
-	height: 52px;
-	border-radius: 5px;
-	font-size: 18pt;
+	height: 76px;
+	border-radius: 7px;
+	font-size: 27pt;
 	cursor: pointer;
 }
 
 .footer__form__input-submit{
-	margin-left: 95px;
+	margin-top: 88px;
 	background-color: #16a085;
-	width: 248px;
-	border: 2px solid white;
+	width: 365px;
+	border: 3px solid white;
 	color: white;
-	height: 52px;
-	border-radius: 5px;
-	font-size: 18pt;
-	margin-bottom: 60px;
+	height: 76px;
+	border-radius: 7px;
+	font-size: 27pt;
 	cursor: pointer;
+	margin-left: 155px;
+	margin-bottom: 88px; 
 }
