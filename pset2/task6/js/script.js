@@ -1,35 +1,44 @@
 function countDate() {
 	var first = new Date();
-    first = Date.parse(document.getElementById('date1').value);
+	first = Date.parse(document.getElementById('date1').value);
 
 	var second = new Date();
 	second = Date.parse(document.getElementById('date2').value);
 
-    var diff = new Date(Math.abs(second - first))
-    var years = Math.round(diff/(1000 * 60 * 60 * 24 * 365));
+	if (isNaN(first) || isNaN(second)) {
+		alert('wrong date format');
+		document.getElementById('date1').value = "October 13, 2014 11:13:00";
+		document.getElementById('date2').value = "October 14, 2014 11:13:00";
 
-    diff -= years;
+		return;
+	}
 
-    var all_days = Math.round(diff/(1000 * 60 * 60 * 24));
-    var months = Math.round(all_days/30);
-    var days = all_days - months;
+	var diff = new Date(Math.abs(second - first))
+	var years = parseInt(diff/(1000 * 60 * 60 * 24 * 365));
 
-    diff -= all_days;
+	diff -= years * 1000 * 60 * 60 * 24 * 365;
 
-    var hours = Math.round(diff/(1000 * 60 * 60));
+	var all_days = parseInt(diff/(1000 * 60 * 60 * 24));
+	var months = parseInt(all_days/30);
+	var days = all_days - months;
 
-    diff -= hours;
+	diff -= all_days * 1000 * 60 * 60 * 24;
 
-    var minutes = Math.round(diff/(1000 * 60));
+	var hours = parseInt(diff/(1000 * 60 * 60));
 
-    diff -= minutes;
+	diff -= hours * 1000 * 60 * 60;
 
-    var seconds = Math.round(diff/(1000 * 60));
+	var minutes = parseInt(diff/(1000 * 60));
 
-    document.getElementById('result').innerHTML = 'Между датами прошло ' + years + ' лет, ' +
-                                                                            months + ' месяца, ' +
-                                                                            days + ' дня,' +
-                                                                            hours + 'часов,' +
-                                                                            minutes + 'минут,', +
-                                                                            seconds + 'секунд.';
+	diff -= minutes * 1000 *60;
+
+	var seconds = parseInt(diff/(1000));
+
+	document.getElementById('result').innerText = 'Между датами прошло ' + 
+													years + ' лет, ' +
+													months + ' месяцев, ' +
+													days + ' дня, ' +
+													hours + ' часов, ' +
+													minutes + ' минут, ' +
+													seconds + ' секунд.';
 }

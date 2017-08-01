@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>summ digits of number</title>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div align="center">
+		<p>
+			<label for="number"></label>
+			<input type="text" id="number" maxlength="99" value="81" style="width: 20%;"
+					onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+		</p>
+		<button onclick="countSumm()">посчитать сумму</button>
+		<p>
+			<div id="result"></div>
+		</p>
+	</div>
+</body>
+</html>

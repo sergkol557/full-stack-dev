@@ -7,27 +7,23 @@
 </head>
 <body>
 	<div align="center">
-		<form name="znak_zodiac" action="znak_zodiac.php">
-		Месяц <select name="your_month">
-		<option value="0"></option>
-		<option value="1">Январь</option>
-		<option value="2">Февраль</option>
-		<option value="3">Март</option>
-		<option value="4">Апрель</option>
-		<option value="5">Май</option>
-		<option value="6">Июнь</option>
-		<option value="7">Июль</option>
-		<option value="8">Август</option>
-		<option value="9">Сентябрь</option>
-		<option value="10">Октябрь</option>
-		<option value="11">Ноябрь</option>
-		<option value="12">Декабрь</option>
-		</select>
-
-		День <input type="text" name="your_date" size="2">
+		<form name="znak_zodiac">
+			<p>
+			input date in format 2014-12-31
+			</p>
+			<input type="text" id="year" maxlength="4" size="4" value="2014" required
+				   onkeypress='return event.charCode >= 48 && event.charCode <= 57'>-
+			<input type="text" id="month" size="2" maxlength="2" value="12" required
+				   onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+				   onkeyup="checkMonth()">-
+			<input type="text" id="day" size="2" maxlength="2" value="31" required
+				   onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+				   onkeyup="checkDay()">
 		<input type="button" value="Узнать" onClick="learn_sign()">
-		<br>
-		Ваш знак Зодиака - <input type="text" name="znak" size="15">
+		<p>
+		Ваш знак Зодиака - <input type="text" id="znak" size="15">
+			<img src="" alt="" id="zodiac_image">
+		</p>
 		</form>
 	</div>	
 </body>

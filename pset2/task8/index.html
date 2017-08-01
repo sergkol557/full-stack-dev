@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chessboard</title>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div align="center">
+		<input type="text" id="value1" size="2" maxlength="2" value="8"
+				   onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+				   x
+		<input type="text" id="value2" size="2" maxlength="2" value="8"
+				   onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>	
+		<p>
+			<button onclick="drawBoard()">draw board</button>
+		</p>		   
+	</div>	
+</body>
+</html>
