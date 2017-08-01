@@ -9,7 +9,7 @@ body{
 
 .header{
 	background-color: white;
-	height: 72px;
+	height: 70px;
 }
 
 .header__logo__a{
@@ -17,198 +17,138 @@ body{
 }
 
 .header__logo__font{
-	padding-left: 157px;
-	font-size: 70pt;
+	padding-left: 155px;
+	font-size: 70px;
 	color: black;
 }
 
 .header__logo{
 	font-weight: bold;
-	margin-top: -3px;
+	margin-top: -5px;
 }
 
 .header__logo--green-font{
 	color: #1abc9c;
-	font-size: 70pt;
-	margin-left: -10pt;
+	font-size: 70px;
+	margin-left: -10px;
 }
 
 .header__navigation{
-	margin-top: -104px;
-	font-size: 18pt;
+	margin-top: -105px;
+	font-size: 20px;
 }
 
 .header__a{
 	text-decoration: none;
 	color: black;
 	float: right;
-	margin-top: 39px;	
+	margin-top: 40px;
 }
 
 .header__a--pos1{
-	margin-right: 158px;
+	margin-right: 160px;
 }
 
 .header__a--pos2{
-	margin-right: 86px;
+	margin-right: 85px;
 }
 
 .header__a--pos3{
-	margin-right: 97px;
+	margin-right: 100px;
 }
 
 .content{	
 	background-color: #1abc9c;
-	height: 815px;
 	clear: both;
-	margin: 0px -4px;
+	margin: 0px -5px;
+	padding-bottom: 15%;
 }
 
 .content__image{
 	padding-top: 75px;
-	padding-left: 82px;
+	padding-left: 80px;
 	float: left;
 }
 
 .content__text{
 	color: white;
-	padding-left: 963px;
+	padding-left: 960px;
+	padding-right: 125px;
 }
 
 .content__text__header{
-	padding-top: 185px;
-	font-size: 35pt;
+	padding-top: 105px;
+	font-size: 35px;
 	font-weight: bold;
 }
 
 .content__text__article{
-	padding-top: 26px;
-	line-height: 1.3;
-	font-size: 20pt;
-	margin-right: 124px;
+	padding-top: 25px;
+	line-height: 1.5;
+	font-size: 20px;
 }
 
 .content__text__btn{
-	padding-top: 42px;
+	padding-top: 40px;
 }
 
 .content__text__buy-btn{
-	width: 208px;
+	width: 210px;
 	border: 2px solid white;
 	color: white;
 	background-color: #1abc9c;
 	height: 75px;
 	border-radius: 5px;
-	font-size: 26pt;
+	font-size: 25px;
 	cursor: pointer;
 }
 
 .content__articles{
-	margin-top: 89px;
-	height: 498px;
+	padding-bottom: 120px;
+	margin-left: 150px;
+	margin-top: 90px;
 }
 
-.content__article1{
+.content__article{
 	float: left;
-	width: 544px;
-	margin-left: 152px;
-}
-
-.content__article1__ico{
-	background-color: #1abc9c;
-	height: 125px;
-	width: 125px;
-	border-radius: 50%;
-	margin-left: 209px;
-	color: white;
-	font-size: 50pt;
+	width: 30%;
 }
 
 .content__article1__ico__font{
-	padding-top: 26px;
-	padding-left: 14px;
+	padding-top: 25px;
+	padding-left: 15px;
 }
 
-.content__article1__header{
+.content__article__header{
 	text-align: center;
 	font-weight: bold;
-	margin-top: 27px;
-	font-size: 21pt;
+	margin-top: 25px;
+	font-size: 20px;
 }
 
-.content__article1__text{
+.content__article__text{
 	text-align: center;
-	margin-top: 26px;
-	font-size: 17.5pt;
-	line-height: 1.54;
+	margin-top: 25px;
+	font-size: 15px;
+	line-height: 1.5;
 }
 
-.content__article2{
-	float: left;
-	width: 544px;
-	margin-left: -10px;
-}
-
-.content__article2__ico{
+.content__article__ico{
 	background-color: #1abc9c;
 	height: 125px;
 	width: 125px;
 	border-radius: 50%;
-	margin-left: 209px;
+	margin-left: 35%;
 	color: white;	
 	font-size: 4em;
 }
 
 .ico{
-	padding-top: 28px;
-	padding-left: 22px;
+	padding-top: 25px;
+	padding-left: 20px;
 }
 
-.content__article2__header{
-	text-align: center;
-	font-weight: bold;
-	margin-top: 27px;
-	font-size: 21pt;	
-}
-
-.content__article2__text{
-	text-align: center;
-	margin-top: 26px;
-	font-size: 17.5pt;
-	line-height: 1.54;
-}
-
-.content__article3{
-	float: left;
-	width: 544px;
-	margin-left: -10px;
-}
-
-.content__article3__ico{
-	background-color: #1abc9c;
-	height: 125px;
-	width: 125px;
-	border-radius: 50%;
-	margin-left: 210px;
-	color: white;	
-	font-size: 4em;
-}
-
-.content__article3__header{
-	text-align: center;
-	font-weight: bold;
-	margin-top: 27px;
-	font-size: 21pt;
-}
-
-.content__article3__text{
-	text-align: center;
-	margin-top: 26px;
-	line-height: 1.54;
-	font-size: 17.5pt;
-}
-
-.footer{
+footer{
 	background-color: #16a085;
 	clear: both;
 }
@@ -217,234 +157,226 @@ body{
 	color: white;
 	font-weight: bold;
 	padding-top: 90px;
-	padding-left: 44%;
-	font-size: 35pt;
+	padding-left: 45%;
+	font-size: 35px;
 }
 
 .footer__form{
-	margin-top: 73px;
-	margin-left: 27.4%;
+	margin-top: 75px;
+	margin-left: 25%;
 }
 
 .footer__form__input-name{
-	font-size: 21.3pt;
-	padding-left: 14px;
-	width: 866px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	width: 75%;
+	height: 45px;
 }
 
 .footer__form__input-email{
-	font-size: 21.3pt;
-	padding-left: 14px;
-	width: 866px;
-	height: 43px;
-	margin-top: 13px;
+	font-size: 20px;
+	padding-left: 15px;
+	width: 75%;
+	height: 45px;
+	margin-top: 15px;
 }
 
 .footer__form__input-phone{
-	font-size: 21.3pt;
-	padding-left: 14px;
-	width: 866px;
-	height: 43px;
-	margin-top: 13px;
+	font-size: 20px;
+	padding-left: 15px;
+	width: 75%;
+	height: 45px;
+	margin-top: 15px;
 }
 
 .footer__form__input-textarea{
-    margin-top: 13px;
-    width: 864px;
-    font-size: 21.3pt;
-    padding-left: 16px;
-    height: 168px;
+    margin-top: 15px;
+    width: 75%;
+    font-size: 20px;
+    padding-left: 15px;
+    height: 170px;
     padding-top: 4px;
 }
 
 .footer__form__input-pas{
-	font-size: 21.3pt;
-	padding-left: 14px;
-	width: 866px;
-	height: 43px;
-	margin-top: 13px;
+	font-size: 20px;
+	padding-left: 15px;
+	width: 75%;
+	height: 45px;
+	margin-top: 15px;
 }
 
 .footer__form__input-page{
-	font-size: 21.3pt;
-	padding-left: 14px;
-	width: 866px;
-	height: 43px;
-	margin-top: 13px;
+	font-size: 20px;
+	padding-left: 15px;
+	width: 75%;
+	height: 45px;
+	margin-top: 15px;
 }
 
 .footer__form__input-search{
-	font-size: 21.3pt;
-	padding-left: 14px;
-	width: 884px;
-	height: 52px;
-	margin-top: 13px;
+	font-size: 20px;
+	padding-left: 15px;
+	width: 77%;
+	height: 50px;
+	margin-top: 15px;
 }
 
 .footer__form__text-questions__wrapper{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__text-questions{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	height: 45px;
 }
 
 .footer__form__input-range{
-	width: 728px;
+	width: 730px;
 }
 
 .footer__form__text-bdaytime__wrapper{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__text-bdaytime{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
+	font-size: 20px;
+	padding-left: 15px;
 }
 
 .footer__form__input-bdaytime{
-	width: 464px;
+	width: 465px;
 	text-align: right;
-	height: 43px;
-	font-size: 21.3pt;
+	height: 45px;
+	font-size: 20px;
 }
 
 .footer__form__text-quality__wrapper{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__text-quality{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	height: 45px;
 }
 
 .footer__form__input-quality{
-	width: 768px;
+	width: 770px;
 	text-align: right;
-	height: 43px;
-	font-size: 21.3pt;
+	height: 45px;
+	font-size: 20px;
 }
 
 .footer__form__text-week__wrapper{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__text-week{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	height: 45px;
 }
 
 .footer__form__input-week{
-	width: 679px;
+	width: 680px;
 	text-align: right;
-	height: 43px;
-	font-size: 21.3pt;
+	height: 45px;
+	font-size: 20px;
 }
 
 .footer__form__text-time__wrapper{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__text-time{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 343px;
+	font-size: 25px;
+	padding-left: 15px;
+	height: 345px;
 }
 
 .footer__form__input-time{
-	width: 693px;
+	width: 695px;
 	text-align: right;
-	height: 43px;
-	font-size: 21.3pt;
+	height: 45px;
+	font-size: 20px;
 }
 
 .footer__form__text-quantity__wrapper{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__text-quantity{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	height: 45px;
 }
 
 .footer__form__input-quantity{
-	width: 513px;
+	width: 515px;
 	text-align: right;
-	height: 43px;
-	font-size: 21.3pt;
+	height: 45px;
+	font-size: 20px;
 }
 
 .footer__form__input-checkbox{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__input-checkbox__text{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	height: 45px;
 }
 
 .footer__form__input-checkbox_radio{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__input-radio1{
-	margin-top: 13px;
+	margin-top: 15px;
 }
 
 .footer__form__input-radio1__text{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	height: 45px;
 }
 
 .footer__form__input-radio2{
-	margin-top: 13px; 
+	margin-top: 15px;
 }
 
 .footer__form__input-radio2__text{
 	color: white;
-	font-size: 21.3pt;
-	padding-left: 14px;
-	height: 43px;
+	font-size: 20px;
+	padding-left: 15px;
+	height: 45px;
 }
 
-.footer__form__input-reset{
-	margin-top: 88px;
+.footer__form__buttons{
+	margin-top: 80px;
+	padding-bottom: 90px;
+}
+
+.footer__form__input__btn{
+	margin-top: 10px;
 	background-color: #16a085;
 	width: 365px;
 	border: 3px solid white;
 	color: white;
-	height: 76px;
+	height: 75px;
 	border-radius: 7px;
-	font-size: 27pt;
+	font-size: 25px;
 	cursor: pointer;
-}
-
-.footer__form__input-submit{
-	margin-top: 88px;
-	background-color: #16a085;
-	width: 365px;
-	border: 3px solid white;
-	color: white;
-	height: 76px;
-	border-radius: 7px;
-	font-size: 27pt;
-	cursor: pointer;
-	margin-left: 155px;
-	margin-bottom: 88px; 
+	margin-right: 10%;
 }
