@@ -6,9 +6,16 @@
 	<script src="js/script.js"></script>
 </head>
 <body>
-	<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-		   onkeyup="showYear()" id="year" value="0">
-	</input>
-	<div id="result">0 лет </div>
+	<div align="center">
+		<p>
+			input years old in digit	
+		</p>
+		<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+			   onkeyup="showYear()" id="year" value="0" size="3">
+		</input>
+		<div>
+			<p id="result">0 лет</p>
+		</div>
+	</div>
 </body>
 </html>

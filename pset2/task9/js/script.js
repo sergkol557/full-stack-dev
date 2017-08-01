@@ -12,7 +12,7 @@ function countEntranceFloor() {
 	}
 
 	if (result_entrance > entrances) {
-		alert('подбездов должно быть на ' + String(result_entrance - entrances) + ' больше');
+		alert('подъездов должно быть на ' + String(result_entrance - entrances) + ' больше');
 		return;
 	}
 

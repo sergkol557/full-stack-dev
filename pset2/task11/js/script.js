@@ -8,14 +8,15 @@ function showUrl() {
 		urls[i] = urls[i].trim();
 
 		if (urls[i].startsWith("https://")) urls[i] = urls[i].replace("https://","");
-        if (urls[i].startsWith("http://")) urls[i] = urls[i].replace("http://","");
+		if (urls[i].startsWith("http://")) urls[i] = urls[i].replace("http://","");
 	}
 
 	urls.sort();
 
-    document.getElementById('result').innerText = "";
+	document.getElementById('result').innerText = "";
 
-    for (i = 0; i < urls.length; i++) {
-        document.getElementById('result').innerText += urls[i] + '\n'
-    }
+	for (i = 0; i < urls.length; i++) {
+		
+		document.getElementById('result').innerText += urls[i] + '\n'
+	}
 }
