@@ -17,14 +17,14 @@ body{
 }
 
 .header__logo__font{
-	padding-left: 155px;
+	padding-left: 10%;
 	font-size: 70px;
 	color: black;
 }
 
 .header__logo{
 	font-weight: bold;
-	margin-top: -5px;
+	float: left;	
 }
 
 .header__logo--green-font{
@@ -33,28 +33,27 @@ body{
 	margin-left: -10px;
 }
 
-.header__navigation{
-	margin-top: -105px;
+.header__navigation{	
 	font-size: 20px;
+	margin-top: -40px;
+	float: left;
 }
 
 .header__a{
 	text-decoration: none;
-	color: black;
-	float: right;
-	margin-top: 40px;
+	color: black;	
 }
 
 .header__a--pos1{
-	margin-right: 160px;
+	margin-left: 0%;
 }
 
 .header__a--pos2{
-	margin-right: 85px;
+	margin-left: 10%;
 }
 
 .header__a--pos3{
-	margin-right: 100px;
+	margin-left: 10%;
 }
 
 .content{	
@@ -62,18 +61,28 @@ body{
 	clear: both;
 	margin: 0px -5px;
 	padding-bottom: 15%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .content__image{
 	padding-top: 75px;
 	padding-left: 80px;
-	float: left;
-}
+	width: 700px;
+	}
 
+img {
+	width: 650px;
+	height: 750px;
+}
 .content__text{
 	color: white;
-	padding-left: 960px;
-	padding-right: 125px;
+	padding-left: 15%;
+	padding-right: 5%;
+	width: 700px;
 }
 
 .content__text__header{
@@ -138,7 +147,7 @@ body{
 	height: 125px;
 	width: 125px;
 	border-radius: 50%;
-	margin-left: 35%;
+	margin-left: calc((100% - 125px)/2);
 	color: white;	
 	font-size: 4em;
 }
@@ -157,7 +166,7 @@ footer{
 	color: white;
 	font-weight: bold;
 	padding-top: 90px;
-	padding-left: 45%;
+	padding-left: 40%;
 	font-size: 35px;
 }
 
@@ -234,7 +243,8 @@ footer{
 }
 
 .footer__form__input-range{
-	width: 730px;
+	margin-left: 10px;
+	width: calc(75% - 110px);
 }
 
 .footer__form__text-bdaytime__wrapper{
@@ -248,10 +258,11 @@ footer{
 }
 
 .footer__form__input-bdaytime{
-	width: 465px;
+	width: calc(75% - 295px);
 	text-align: right;
 	height: 45px;
 	font-size: 20px;
+	margin-left: 10px;
 }
 
 .footer__form__text-quality__wrapper{
@@ -266,10 +277,11 @@ footer{
 }
 
 .footer__form__input-quality{
-	width: 770px;
+	width: calc(75% - 80px);
 	text-align: right;
 	height: 45px;
 	font-size: 20px;
+	margin-left: 10px;
 }
 
 .footer__form__text-week__wrapper{
@@ -284,10 +296,11 @@ footer{
 }
 
 .footer__form__input-week{
-	width: 680px;
+	width: calc(75% - 150px);
 	text-align: right;
 	height: 45px;
 	font-size: 20px;
+	margin-left: 20px;
 }
 
 .footer__form__text-time__wrapper{
@@ -296,16 +309,17 @@ footer{
 
 .footer__form__text-time{
 	color: white;
-	font-size: 25px;
+	font-size: 20px;
 	padding-left: 15px;
 	height: 345px;
 }
 
 .footer__form__input-time{
-	width: 695px;
+	width: calc(75% - 150px);
 	text-align: right;
 	height: 45px;
 	font-size: 20px;
+	margin-left: 30px;
 }
 
 .footer__form__text-quantity__wrapper{
@@ -320,10 +334,11 @@ footer{
 }
 
 .footer__form__input-quantity{
-	width: 515px;
+	width: calc(75% - 245px);
 	text-align: right;
 	height: 45px;
 	font-size: 20px;
+	
 }
 
 .footer__form__input-checkbox{
