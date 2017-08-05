@@ -24,13 +24,13 @@ body {
 	flex-direction: row;
 }
 
-.content__main {	
+.content__main {
 	width: 70%;
 	background: #bdc3c7;
 	text-align: center;
 }
 
-.content__addit {	
+.content__addit {
 	width: 30%;
 	background: #95a5a6;
 	text-align: center;
@@ -45,7 +45,7 @@ header {
 	color: #ecf0f1;	
 	border: 1px solid #ADADD6;
 	padding-top: 29px;
-	padding-bottom: 29px;			
+	padding-bottom: 29px;
 }
 
 footer {

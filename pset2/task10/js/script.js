@@ -1,7 +1,6 @@
 function countSumm() {
 	
 	var number = document.getElementById('number').value;
-	var len = number.toString(number).length;
 	var summ = 0;
 	var i;
 
@@ -12,9 +11,10 @@ function countSumm() {
 		return;
 	}
 
-	for ( i = 0; i < number.toString(number).length; i++ ) {
+	for ( i = 0; number >= 1; i++ ) {
 
-		summ += Number(number.charAt(i));
+		summ += number % 10;
+		number = parseInt(number / 10);
 	}
 	
 	document.getElementById('result').innerText = 'Сумма цифр равна '+ summ;
