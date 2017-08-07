@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
 														" id='list'></div>");
 
 	for (var i = 0; i < elements.length; i++) {
-		jQuery("#list").append("<div style='height: 45px; width: 400px;" +
+		jQuery("#list").append("<div style='height: 45px; width: 400px; cursor: pointer;" +
 														" margin-top: 15px; display: flex;" +
 														" flex-direction: row;" +
 														"justify-content: flex-start; align-items: center;'" +
@@ -48,7 +48,7 @@ jQuery(document).ready(function () {
 	});
 
 	jQuery("[id = option]").hover(function () {
-				jQuery(this).css('background-color', 'beige');
+				jQuery(this).css('background-color', '#bdc3c7');
 		});
 
 	jQuery("[id = option]").mouseleave(function () {
