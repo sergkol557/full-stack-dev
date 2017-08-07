@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="test landing page">
+		<meta name="author" content="sergkol557">
+		<title>nplusplus</title>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="header__logo">
+					<a href="#" class="header__logo__a">
+						<span class="header__logo__font">
+						N
+						</span>
+						<span class="header__logo--green-font">
+						++
+						</span>
+					</a>
+				</div>
+				<div class="header__navigation" id="nav">
+						<a href="#" class="header__a header__a--pos1" data-id="web">WEB DEV</a>
+						<a href="#" class="header__a header__a--pos2" data-id="mobile">MOBILE DEV</a>
+						<a href="#" class="header__a header__a--pos3" data-id="high">HIGHLOAD</a>
+					</div>
+			</header>
+			<div class="content">
+				<div class="content__image">
+					<img src="images/iphone.png">
+				</div>
+				<div class="content__text">
+					<p class="content__text__header" align="center">
+						Our awesome app is ready to use!
+					</p>
+					<p class="content__text__article" align="justify">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae ipsum voluptatem laboriosam quisquam velit molestiae voluptate. Dolores necessitatibus praesentium porro, doloremque magni voluptates itaque labore error!
+					</p>
+					<div class="content__text__btn" align="center">
+						<button class="content__text__buy-btn">Buy now!</button>
+					</div>
+				</div>
+			</div>
+			<div class="content__articles">
+				<div id="left">
+					<div class="content__article" id="web">
+						<div class="content__article__ico">
+							<div class="content__article1__ico__font">
+								&lt;/&gt;
+							</div>
+						</div>
+						<div class="content__article__header">
+							Web development
+						</div>
+						<div class="content__article__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis provident a corporis neque sapiente earum harum quos debitis hic, eveniet quod obcaecati quisquam, aspernatur architecto culpa aperiam!
+						</div>
+					</div>
+				</div>
+				<div id="center">
+					<div class="content__article" id="mobile">
+						<div class="content__article__ico">
+							<i class="fa fa-android fa-fw ico" aria-hidden="true"></i>
+						</div>
+						<div class="content__article__header">
+							Mobile development
+						</div>
+						<div class="content__article__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel facere minima placeat nemo veniam fugiat tempore dolores, non, consequatur voluptas aliquam similique debitis voluptatibus ab, aspernatur est!
+						</div>
+					</div>
+				</div>
+				<div id="right">
+					<div class="content__article" id="high">
+						<div class="content__article__ico">
+							<i class="fa fa-cloud fa-fw ico" aria-hidden="true"></i>
+						</div>
+						<div class="content__article__header">
+							Highload
+						</div>
+						<div class="content__article__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ut! Voluptates culpa dignissimos deserunt mollitia, facere, dicta, laborum magni vel officia tempore labore impedit placeat at modi?
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="footer__header">
+					Contact us!
+				</div>
+				<form class="footer__form">
+					<input type="text" name="name" placeholder="Type here your name, please" 
+					class="footer__form__input-name">
+					
+					<input type="email" name="email" placeholder="Type here your email, please"
+					class="footer__form__input-email">
+					
+					<input type="tel" name="usrtel" placeholder="Type here your phone, please"
+					class="footer__form__input-phone">
+					
+					<textarea rows="4" cols="45" name="text" placeholder="Ask your question" 
+					class="footer__form__input-textarea"></textarea>
+					
+					<input type="password" name="psw" placeholder="Type here your password, please"
+					class="footer__form__input-pas">
+					
+					<input type="url" name="homepage" placeholder="Type here your homepage, please"
+					class="footer__form__input-page">
+					
+					<input type="search" name="googlesearch" placeholder="Type here your search, please"
+					class="footer__form__input-search">
+					
+					<div class="footer__form__interspace">
+						<span class="footer__form__text-questions">Questions:</span>
+						<input type="range" name="questions" min="0" max="10" 
+						class="footer__form__input-range">
+					</div>
+					
+					<div class="footer__form__interspace">
+						<span class="footer__form__text-bdaytime">Type here your birthday, please
+						</span>			 
+						<input type="datetime-local" name="bdaytime" 
+						class="footer__form__input-bdaytime">
+					</div>
+					
+					<div class="footer__form__interspace">
+						<span class="footer__form__text-quality">Quality:</span>
+						<input type="number" name="quality" min="0" max="100" step="10" value="90"
+						class="footer__form__input-quality">
+					</div>
+					
+					<div class="footer__form__interspace">
+						<span class="footer__form__text-week">Select a week:</span>
+						<input type="week" name="week_year" 
+						class="footer__form__input-week">
+					 </div>
+					 
+					 <div class="footer__form__interspace">
+						<span class="footer__form__text-time">Select a time:</span>
+						<input type="time" name="usr_time" class="footer__form__input-time">
+					</div>
+					
+					<div class="footer__form__interspace">
+						<span class="footer__form__text-quantity" >Quantity (between 1 and 5):
+						</span>
+						<input type="number" name="quantity" min="1" max="5" class="footer__form__input-quantity">
+					</div>
+
+					<div class="footer__form__interspace">
+						<input type="checkbox" name="chbx" value="yes" 
+						class="footer__form__input-checkbox1">
+							<span class="footer__form__input-checkbox__text">
+							If you have any questions
+							</span>
+					</div>
+					<div class="footer__form__interspace">
+
+						<input type="radio" name="gender" value="male" checked 
+						 class="footer__form__interspace">
+							<span class="footer__form__input-radio1__text">
+							If you do something
+							</span>
+						
+						<input type="radio" name="gender" value="female"
+						 class="footer__form__interspace">
+							<span class="footer__form__input-radio2__text">
+							If you do not do something
+							</span>
+					</div>
+					<div class="footer__form__buttons" align="center">
+						<input type="reset" class="footer__form__input__btn" value="reset">
+						<input type="Submit" value="Send email!"
+						class="footer__form__input__btn">
+					</div>
+				</form>
+			</footer>
+		</div>
+		<div id="top" class="top">
+			<i class="fa fa-arrow-up fa-fw top__ico" aria-hidden="true"></i>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
