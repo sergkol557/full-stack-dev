@@ -153,7 +153,7 @@ img {
 	width: 125px;
 	border-radius: 50%;
 	margin-left: calc((100% - 125px)/2);
-	color: white;	
+	color: white;
 	font-size: 4em;
 }
 
@@ -248,7 +248,7 @@ footer{
 	font-size: 20px;
 	padding-left: 15px;
 	height: 45px;
-	width: 30%;
+	width: 40%;
 }
 
 .footer__form__input-range{
@@ -260,7 +260,7 @@ footer{
 	color: white;
 	font-size: 20px;
 	padding-left: 15px;
-	width: 30%;
+	width: 40%;
 }
 
 .footer__form__input-bdaytime{
@@ -275,7 +275,7 @@ footer{
 	font-size: 20px;
 	padding-left: 15px;
 	height: 45px;
-	width: 30%;
+	width: 40%;
 }
 
 .footer__form__input-quality{
@@ -290,7 +290,7 @@ footer{
 	font-size: 20px;
 	padding-left: 15px;
 	height: 45px;
-	width: 30%;
+	width: 40%;
 }
 
 .footer__form__input-week{
@@ -305,7 +305,7 @@ footer{
 	font-size: 20px;
 	padding-left: 15px;
 	height: 45px;
-	width: 30%;
+	width: 40%;
 }
 
 .footer__form__input-time{
@@ -320,7 +320,7 @@ footer{
 	font-size: 20px;
 	padding-left: 15px;
 	height: 45px;
-	width: 30%;
+	width: 40%;
 }
 
 .footer__form__input-quantity{
