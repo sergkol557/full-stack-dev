@@ -29,3 +29,29 @@
 	border-radius: 35px;
 	display: none;
 }
+
+.panel__list{
+	font-size: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.list__option{
+	height: 45px;
+	width: 400px;
+	cursor: pointer;
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.option__img{
+	height: 45px;
+	width: 45px;
+	margin: 0;
+	padding: 0;
+}
