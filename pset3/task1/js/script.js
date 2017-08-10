@@ -4,7 +4,8 @@ $(document).ready(function () {
 
 	for (var i = 0; i < elements.length; i++) {
 		$("#list").append("<div id='option"+i+"' class='list__option'>" +
-								"<img class='option__img' src='img/"+ elements[i] +
+								"<img class='option__img' src='img/"+ 
+								elements[i] +
 								".png'><div>" + elements[i] +
 								"</div></div>");
 	}
