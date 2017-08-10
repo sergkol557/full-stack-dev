@@ -14,7 +14,7 @@ $(document).ready(function () {
 		$("#panel").slideDown("medium");
 	});
 
-	$("[id = option]").hover(
+	$(".list__option").hover(
 		function () {
 				$(this).css('background-color', '#bdc3c7');
 		},
