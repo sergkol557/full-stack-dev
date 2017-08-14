@@ -8,7 +8,7 @@
 	}
 	$color1 = 'white';
 	$color2 = 'black';
-	$size = intval(1200/$cols);
+	$size = intval(1200/$cols)."px";
 
 	echo '<table border="1"><tr>';
 
