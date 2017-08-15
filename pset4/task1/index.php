@@ -10,7 +10,7 @@
 		<?php
 			$summ = 0;
 			for ($i = -1000; $i < 1001; $i++) {
-			   $summ += $i;
+				$summ += $i;
 			}
 			echo "summ is $summ";
 		?>
