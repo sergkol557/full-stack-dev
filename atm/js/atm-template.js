@@ -13,20 +13,20 @@ var ATM = {
 	// authorization
 	auth: function(number, pin) {
 
-        if (this.is_auth && this.current_type && this.current_user){
-        	console.log("you must log out first");
-        	return;
-        }
+		if (this.is_auth && this.current_type && this.current_user){
+			console.log("you must log out first");
+			return;
+		}
 		var id;
 
-        for (id = 0; id < this.users.length; id ++) {
-        	if (number == this.users[id].number && pin == this.users[id].pin) {
+		for (id = 0; id < this.users.length; id ++) {
+			if (number == this.users[id].number && pin == this.users[id].pin) {
 
-        		this.is_auth = true;
-        		this.current_type = this.users[id].type;
-        		this.current_user = id;
-        		console.log("welocme "+this.users[id].type);
-        		return;
+				this.is_auth = true;
+				this.current_type = this.users[id].type;
+				this.current_user = id;
+				console.log("welocme "+this.users[id].type);
+				return;
 			}
 		}
 		console.log("unknown user");
@@ -37,7 +37,9 @@ var ATM = {
 		if (this.current_user) {
 
 			console.log("you debet is "+this.users[this.current_user].debet);
-			this.reports += "user "+ this.users[this.current_user].number + " check current debet\r\n";
+			this.reports += "user "+ this.users[this.current_user].number + 
+							" check current debet\r\n";
+		
 		} else {
 			console.log("you must authorize first");
 		}
@@ -45,17 +47,18 @@ var ATM = {
 	},
 	// get cash - available for user only
 	getCash: function(amount) {
-        if  (this.current_type == "user" && this.is_auth){
+		if  (this.current_type == "user" && this.is_auth){
 
-        	if (amount > this.users[this.current_user].debet) {
-        		console.log("you dont have enought money");
-        		return;
+			if (amount > this.users[this.current_user].debet) {
+				console.log("you dont have enought money");
+				return;
 			}
 			this.users[this.current_user].debet -= amount;
-        	this.cash -= amount;
-            this.reports += "user "+ this.users[this.current_user].number + " get " + amount + "cash\r\n";
-        	console.log("you debet is " + this.users[this.current_user].debet)
-        }
+			this.cash -= amount;
+			this.reports += "user "+ this.users[this.current_user].number + 
+							" get " + amount + "cash\r\n";
+			console.log("you debet is " + this.users[this.current_user].debet)
+		}
 
 	},
 	// load cash - available for user only
@@ -71,10 +74,11 @@ var ATM = {
 			this.users[this.current_user].debet += amount;
 			this.cash += amount;
 			console.log("you balance is "+this.users[this.current_user]['debet']);
-            this.reports += "user "+ this.users[this.current_user].number + " put " + amount + "cash\r\n";
+			this.reports += "user "+ this.users[this.current_user].number + 
+							" put " + amount + "cash\r\n";
 		} else {
 
-			console.log("you can load cash");
+			console.log("you cant load cash");
 		}
 	},
 	// load cash to ATM - available for admin only - EXTENDED
@@ -82,9 +86,11 @@ var ATM = {
 
 		if (this.current_type == "admin" && this.is_auth) {
 
-            this.cash += addition;
-            this.reports += "admin "+ this.users[this.current_user].number+ " put " + addition + "cash\r\n";
-            console.log ("cash in bankomat is"+this.cash);
+			this.cash += addition;
+			this.reports += "admin "+ this.users[this.current_user].number+ 
+							" put " + addition + "cash\r\n";
+			console.log ("cash in bankomat is"+this.cash);
+
 		} else {
 
 			console.log ("you dont have permission to load_cash");
@@ -95,8 +101,9 @@ var ATM = {
 	getReport: function() {
 		if (this.current_type == "admin" && this.is_auth){
 
-            console.log(this.reports);
+			console.log(this.reports);
 		} else {
+
 			console.log("you dont have permission to get report");
 		}
 	},
@@ -104,11 +111,13 @@ var ATM = {
 	logout: function() {
 		if (this.is_auth && this.current_type && this.current_user){
 
-            this.is_auth = false;
-            this.current_type = false;
-            this.current_type = false;
-            console.log("you logout succefully");
+			this.is_auth = false;
+			this.current_type = false;
+			this.current_type = false;
+			console.log("you logout succefully");
+
 		} else {
+			
 			console.log("you cant logout, you must authorized first");
 		}
 	}
