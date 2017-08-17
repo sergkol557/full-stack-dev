@@ -1,0 +1,132 @@
+@font-face {
+	font-family:"Montserrat";
+	src:
+		url("fonts/Montserrat-Regular.eot?") format("eot"),
+		url("fonts/Montserrat-Regular.woff") format("woff"),
+		url("fonts/Montserrat-Regular.ttf") format("truetype"),
+		url("fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"Pacifico";
+	src:
+		url("fonts/Pacifico.eot?") format("eot"),
+		url("fonts/Pacifico.woff") format("woff"),
+		url("fonts/Pacifico.ttf") format("truetype"),
+		url("fonts/Pacifico.svg#Pacifico-Regular") format("svg");
+		font-weight:normal;
+		font-style:normal;
+	}
+
+ body {
+	 margin: 0;
+ }
+ 
+ .wrapper {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+	 align-items: stretch;
+ }
+ 
+ header {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: flex-start;
+	 align-items: stretch;
+	 height: 10px;
+ }
+ 
+ .header1 {
+	 width: 10%;
+	 background-color: #635960;
+ }
+ 
+ .header2 {
+	 width: 10%;
+	 background-color: #8b8e59;
+ }
+ 
+ .header3 {
+	width: 10%;
+	background-color: #eada7d;
+ }
+
+ .header4{
+	 width: 10%;
+	 background-color: #fffecd;
+ }
+
+ .header5 {
+	 width: 10%;
+	 background-color: #7bc3ab;
+ }
+
+ .content {
+	 background-color: #b9c783;
+	 height: calc(100vh - 10px);	
+ }
+
+ .content__wrapper {
+	min-width: 300px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+ }
+
+ .content__header {
+	 color: #fffecd;
+	 font-family: Pacifico;
+	 font-size: 4rem;	 
+	 text-align: center;
+	 margin-top: 20vh;
+ }
+
+ form {
+	 display: flex;	 
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: stretch;	 
+	 width: 280px;
+	 margin-top: 50px;
+ }
+
+ p{
+	 margin: 2px 0;
+	 padding: 0; 
+ }
+
+ label {
+	 color: #635960;
+	 display: block;
+	 text-align: left;
+	 width: 100%;
+	 font-family: Montserrat; 
+	 font-size: 80%;	 
+ }
+
+ input {
+	 background-color: #fffecd;
+	 border: 0;
+	 padding-left: 10px;
+	 width: calc(100% - 10px);
+	 height: 25px;
+	 margin-bottom: 15px;	
+	 
+	 font-family: Montserrat; 
+ }
+
+ button {
+	 background-color: #635960;
+	 color: #fffecd;
+	 width: 100%;
+	 border: 0;
+	 font-family: Montserrat; 
+	 font-size: 120%;
+	 height: 30px;
+	 margin-top: 10px;
+	 box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.6); 
+ }
