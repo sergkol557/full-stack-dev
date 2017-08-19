@@ -85,7 +85,7 @@
 	 margin-top: 20vh;
  }
 
- form {
+ .content__form {
 	 display: flex;	 
 	 flex-direction: column;
 	 justify-content: center;
@@ -108,14 +108,13 @@
 	 font-size: 80%;	 
  }
 
- input {
+ .input {
 	 background-color: #fffecd;
 	 border: 0;
 	 padding-left: 10px;
 	 width: calc(100% - 10px);
 	 height: 25px;
-	 margin-bottom: 15px;	
-	 
+	 margin-bottom: 15px;	 
 	 font-family: Montserrat; 
  }
 
@@ -129,4 +128,48 @@
 	 height: 30px;
 	 margin-top: 10px;
 	 box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.6); 
+ }
+.listbox {
+	margin-top: 40px;
+}
+
+ textarea {
+	 width: 500px;
+	 min-width: 500px;
+	 height: 250px;
+	 background-color:#fffecd;
+	 border: 0;
+ }
+
+ .content__form-wrapper {
+	 width: 500px;
+	 min-width: 500px;
+	 margin-top: 25px;
+ }
+
+ .msg-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+ }
+
+ .msg-send {
+	background-color: #635960;
+	color: #fffecd;
+	width: 20%;
+	border: 0;
+	font-family: Montserrat; 
+	font-size: 120%;
+	height: 30px; 
+ }
+
+ .msg-txt {
+	background-color: #fffecd;
+	border: 0;
+	padding-left: 10px;
+	width: calc(75% - 10px);
+	height: 30px;
+	margin-bottom: 15px;	 
+	font-family: Montserrat; 
  }

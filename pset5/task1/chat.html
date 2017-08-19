@@ -7,6 +7,8 @@
     <title>Easy Chat</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -24,17 +26,17 @@
             <div class="header5"></div>
         </header>
         <div class="content" align="center">
-            <div class="content__wrapper">
+            <div class="chat__wrapper">
                 <div class="content__header">
                     Easy Chat
                 </div>
-                <div>
-                    <form method="post" action="login.php" class="content__form">
-                        <p><label>Enter your name</label></p>
-                        <p><input type="text" name="login" required placeholder="John Dow" class="input"></p>
-                        <p><label>Enter your password</label></p>
-                        <p><input type="password" name="pas" required placeholder="****" class="input"></p>
-                        <p><button type="submit">Submit</button></p>
+                <div class="listbox">
+                    <textarea></textarea>
+                </div>                
+                <div class="content__form-wrapper">
+                    <form class="msg-form" id="msg">                     
+                        <input type="text" name="msg" required class="msg-txt" id="msg-txt">
+                        <input type="button" class="msg-send" value="Send">
                     </form>
                 </div>
             </div>
