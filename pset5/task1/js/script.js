@@ -1,15 +1,17 @@
-$(document).ready(
-
-    $("#msg").submit(function (event) {
-
-        event.preventDefault();
-        var data = $("#msg-txt").text().html();
-        console.log(data);
-        var posting = $.post( "chat.php", { name: $('#name').val(), name2: $('#name2').val() } );
-
-        posting.done(function( data ) {
-            $("#msg-txt").html().text();
-        });
-
+$(document).ready(function(){
+    $("#send").click(function(){		
+		var msg = $("#text-msg").val();
+		var html_coded = $('<div/>').text(msg).html().serialize();
+		
+		$.ajax({
+			type: "POST",
+			url: "chat.php",
+			data: html_coded,
+			success: function(data) {
+				$("#text-msg").val("");				
+				$("textarea").html(data).text();
+			}
+		});
+		      
     });
-);
+});
