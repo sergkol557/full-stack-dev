@@ -69,8 +69,8 @@
  }
 
  .content__wrapper {
-	min-width: 300px;
-	width: 300px;
+	min-width: 400px;
+	width: 400px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -82,7 +82,7 @@
 	 font-family: Pacifico;
 	 font-size: 4rem;	 
 	 text-align: center;
-	 margin-top: 20vh;
+	 margin-top: 15vh;
  }
 
  .content__form {
@@ -134,16 +134,16 @@
 }
 
  textarea {
-	 width: 500px;
-	 min-width: 500px;
+	 width: 380px;
+	 min-width: 380px;
 	 height: 250px;
 	 background-color:#fffecd;
 	 border: 0;
  }
 
  .content__form-wrapper {
-	 width: 500px;
-	 min-width: 500px;
+	 width: 380px;
+	 min-width: 380px;
 	 margin-top: 25px;
  }
 
