@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-    $("#send").click(sendMessage($("#text-msg").val()));
+    $('#go').click(function () {
+        sendMessage($("#text-msg").val());
+    });
 
     $("html").keydown(function (eventObject) {
 
@@ -16,12 +18,12 @@ $(document).ready(function(){
 
 function sendMessage(msg) {
 
-	var html_coded = $('<div/>').text(msg).html().serialize();
+	var html_coded = $('<div/>').text(msg).html();
 
 	$.post("chat.php", {suggest: msg}, function(result) {
 		if(msg) $("#text-msg").val("");
 
-		$("textarea").html(data).text();
+		$("textarea").val(result);
 	});
 
 
