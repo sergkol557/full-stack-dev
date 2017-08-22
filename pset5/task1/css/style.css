@@ -66,6 +66,10 @@
  .content {
 	 background-color: #b9c783;
 	 height: calc(100vh - 10px);
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
  }
 
  .content__wrapper {
@@ -82,7 +86,7 @@
 	 font-family: Pacifico;
 	 font-size: 4rem;	 
 	 text-align: center;
-	 margin-top: 15vh;
+	 /*margin-top: 15vh;*/
  }
 
  .content__form {
@@ -187,3 +191,8 @@
 	 width: 1em;
 	 height: 1em;
  }
+
+.textarea>p {
+	padding: 0;
+	margin: 0;
+}
