@@ -65,7 +65,7 @@
 
  .content {
 	 background-color: #b9c783;
-	 height: calc(100vh - 10px);	
+	 height: calc(100vh - 10px);
  }
 
  .content__wrapper {
@@ -134,13 +134,18 @@
 	margin-top: 40px;
 }
 
- textarea {
+ .textarea {
+	 overflow-y: scroll;
 	 width: 360px;
 	 min-width: 360px;
 	 height: 230px;
 	 padding: 10px;
 	 background-color:#fffecd;
 	 border: 0;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+	 align-items: flex-start;
  }
 
  .content__form-wrapper {
@@ -175,4 +180,10 @@
 	height: 30px;
 	margin-bottom: 15px;	 
 	font-family: Montserrat; 
+ }
+
+ .smile {
+	 display: inline;
+	 width: 1em;
+	 height: 1em;
  }

@@ -4,7 +4,7 @@ $(document).ready(function(){
         sendMessage($("#text-msg").val());
     });
 
-    $("html").keydown(function (eventObject) {
+    $("html").keydown(function (event) {
 
 		if (event.keyCode == 13) {
 			sendMessage($("#text-msg").val());
@@ -20,10 +20,11 @@ function sendMessage(msg) {
 
 	var html_coded = $('<div/>').text(msg).html();
 
-	$.post("chat.php", {suggest: msg}, function(result) {
+	$.post("chat.php", {suggest: html_coded}, function(result) {
 		if(msg) $("#text-msg").val("");
-
-		$("textarea").val(result);
+		
+		$(".textarea").html(result);
+		$(".textarea").scrollTop($(".textarea").prop('scrollHeight'));
 	});
 
 

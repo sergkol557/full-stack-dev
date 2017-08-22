@@ -14,13 +14,11 @@
  		$json[$login] = $pas;
  		$answer = file_get_contents('chat.html');
 	    setcookie('login', $login);
-	    setcookie('pas', $pas);
 	    $answer = str_replace('<body>', '<body onload=\'alert("welcome '.$login.'");\'>', $answer);
 
     } elseif ($json[$login] == $pas) {
 	    $answer = file_get_contents('chat.html');
 	    setcookie('login', $login);
-	    setcookie('pas', $pas);
 
     } else {
 	    $answer = file_get_contents('index.html');
