@@ -1,18 +1,17 @@
 $(document).ready(function(){
 
-    $('#go').click(function () {
-        sendMessage($("#text-msg").val());
-    });
+	$('#go').click(function () {
+		sendMessage($("#text-msg").val());
+	});
 
-    $("html").keydown(function (event) {
+	$("html").keydown(function (event) {
 
 		if (event.keyCode == 13) {
 			sendMessage($("#text-msg").val());
 		}
-    });
+	});
 
-    setInterval(sendMessage(), 60000);
-
+	setInterval(sendMessage(), 60000);
 
 });
 
