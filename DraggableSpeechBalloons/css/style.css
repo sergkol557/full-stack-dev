@@ -27,3 +27,11 @@ body {
 	border-radius: 15px;
 	position: absolute;
 }
+
+.corner {
+	border: 10px solid transparent;
+	border-top: 10px solid white;
+	width: 10px;
+	height: 20px;
+	position: relative;
+}
