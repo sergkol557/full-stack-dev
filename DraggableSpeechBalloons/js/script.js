@@ -3,22 +3,36 @@ $(document).ready(function () {
 
 	$("#img").dblclick(function (e) {
 
+
 		var pos = $(this).offset(); 
-		var relX = e.pageX - pos.left + $(this).scrollLeft();
-		var relY = e.pageY - pos.top + $(this).scrollTop();
-		
-		$(this).append($('<div>').
-			addClass('placeddiv').
-			css({
-				"position": "absolute",
+		var relX = e.pageX;
+		var relY = e.pageY;
+
+		$(this).append($('<div>')
+			.addClass('placeddiv')
+			.css({				
 				"left": relX,
 				"top": relY,
 				"width": "100px",
-				"height": "20px",
-				"background-color": "white",
-				"cursor":"move"
-		}));
+
+		})	.draggable({cursor: "move", containment: "#img", scroll: false})
+			.dblclick(function () {
+							$(this).append(
+								$("<input type='text'>")
+									.focus()
+									.val($(this).text())																
+									.keydown(function (e) {
+										if (e.keyCode == 13) {
+											$(this).parent().text($(this).val()).css({"width" : $(this).val().length * 10 + "px"});											
+											$(this).blur().remove();																								
+										}
+										if (e.keyCode == 27) {
+											$(this).blur().remove();											
+										}											
+									})
+								);
+			}));
 	});
 
-	$(".placediv").each().draggable();
+
 });
