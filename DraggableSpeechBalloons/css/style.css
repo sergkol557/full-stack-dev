@@ -3,10 +3,10 @@ body {
 	padding: 0;
 }
 .wrapper {
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: stretch;
+	align-items: stretch; */
 	width: 100%;
 	min-width: 500px;
 }
@@ -14,7 +14,7 @@ body {
 .image-wrapper {
 	height: 450px;
 	background: url(../img/indian-commuter-train.jpg) no-repeat;
-	width: 500px;
+	width: 600px;
 }
 
 .header {
@@ -24,14 +24,21 @@ body {
 .placeddiv {	
 	height: 20px;
 	background-color: white;
-	border-radius: 15px;
-	position: absolute;
+	border-radius: 15px;	
+	margin: 0;
+	padding-left: 5px;	
+	border: 0;
+	width: 100px;
 }
 
-.corner {
-	border: 10px solid transparent;
+.placeddiv:after {
+	content: "";
+	position: absolute;
+	right: 5px;
+	bottom: -8px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
 	border-top: 10px solid white;
-	width: 10px;
-	height: 20px;
-	position: relative;
-}
+	border-right: 10px solid transparent;
+  }

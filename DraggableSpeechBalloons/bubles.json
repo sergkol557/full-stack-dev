@@ -1,0 +1,33 @@
+{
+    "baloon2": {
+        "left": "417",
+        "top": "272",
+        "text": "asdas"
+    },
+    "baloon1": {
+        "text": "13123",
+        "left": "495",
+        "top": "171"
+    },
+    "baloon3": {
+        "text": "dsfd",
+        "left": "0",
+        "top": "394"
+    },
+    "baloon4": {
+        "text": "asda",
+        "left": "282",
+        "top": "414"
+    },
+    "baloon5": {
+        "text": "3123",
+        "left": "130",
+        "top": "239"
+    },
+    "baloon6": {
+        "text": "231223",
+        "left": "0",
+        "top": "115"
+    }
+
+}
