@@ -2,7 +2,7 @@
     "baloon2": {
         "left": "417",
         "top": "272",
-        "text": "asdas"
+        "text": "asdasasdsadasd"
     },
     "baloon1": {
         "text": "13123",
@@ -12,22 +12,21 @@
     "baloon3": {
         "text": "dsfd",
         "left": "0",
-        "top": "394"
+        "top": "396"
     },
     "baloon4": {
         "text": "asda",
-        "left": "282",
-        "top": "414"
+        "left": "475",
+        "top": "125"
     },
     "baloon5": {
-        "text": "3123",
-        "left": "130",
-        "top": "239"
+        "text": "asdd2131",
+        "left": "32",
+        "top": "197"
     },
     "baloon6": {
-        "text": "231223",
+        "text": "231223asdsadasdsadsadasdasdsaasdsadsadsadsadsadasdasdadasdas",
         "left": "0",
-        "top": "115"
+        "top": "125"
     }
-
 }

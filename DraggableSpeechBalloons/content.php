@@ -12,6 +12,7 @@
 			unset($json[$_POST['id']]);
 
 		} else {
+
 			$json[$_POST['id']]['text'] = $_POST['msg'];
 		}
 		
@@ -30,9 +31,5 @@
 
 	if ($_POST['action'] == 'load') {
 		$json = file_get_contents('bubles.json');
-		echo $json;		
+		echo $json;
 	}
-
-
-
-?>

@@ -6,13 +6,13 @@ $(document).ready(function () {
 
 	$.post("content.php", 
 		{
-			action: "load", 
+			action: 'load',
 		},		
 		function (result) {
 						
 			for ( var id in result) {
 				
-				addBaloon("empty", id, result[id]['left'], result[id]['top'], result[id]['text']);
+				addBaloon('empty', id, result[id]['left'], result[id]['top'], result[id]['text']);
 			}
 
 	},'json');
@@ -28,15 +28,15 @@ $(document).ready(function () {
 function addBaloon (e, id, left, top, text) {
 
 
-	if (e == "empty" || e.target.className == 'image-wrapper') {	
+	if (e == 'empty' || e.target.className == 'image-wrapper') {
 		
 		baloons++;
 		
 		var pos = document.getElementById('img').getBoundingClientRect();
-		var relX = left ? left + "px" : e.pageX - (pos.left + pageXOffset);
-		var relY = top ? top + "px" : e.pageY - (pos.top + pageYOffset);
+		var relX = left ? left + 'px' : e.pageX - (pos.left + pageXOffset);
+		var relY = top ? top + 'px' : e.pageY - (pos.top + pageYOffset);
 		var res_id = id ? id : 'baloon' + baloons;
-		
+		var width = text ? (text.length + 1) * 10 + 'px' : '100px';
 		
 		
 		$("#img").append($('<div>')
@@ -44,54 +44,58 @@ function addBaloon (e, id, left, top, text) {
 			.attr('id', res_id)
 			.text(text)
 			.css({
-				"position": "absolute",
-				"left": relX,
-				"top": relY,
+				'position': 'absolute',
+				'left': relX,
+				'top': relY,
+				'width': width
 				}).draggable({
-					cursor: "move",
-					containment: "#img",
+					cursor: 'move',
+					containment: '#img',
 					scroll: false,
 					stop: function() {
 						var current_position = this.getBoundingClientRect();
-							$.post("content.php", 
-							{
-								action: "coord",
-								id: $(this).attr("id"),
-								left: current_position.left,
-								top: current_position.top,
-								});
-							}
+						$.post('content.php',
+						{
+							action: 'coord',
+							id: $(this).attr('id'),
+							left: current_position.left,
+							top: current_position.top,
+							});
+						}
 					})
 					.dblclick(function (e) {
 		
-						if (e.target.className.includes('placeddiv')) {							
+						if (e.target.className.includes('placeddiv')) {
 		
 							$("input").remove();
 							var text = $(this).text();
-							$(this).text("");
-							var input = document.createElement("input");
+							$(this).text('');
+							var input = document.createElement('input');
 							$(this).append(
 								$(input)
 								.val(text)
+								.css({
+									'width':$(this).width(),
+								})
 								.keydown(function (e) {
 									if (e.keyCode == 13) {
-										$.post("content.php", 
+										$.post('content.php',
 										{
-											action: "addtext",
-											id: $(this).parent().attr("id"),
+											action: 'addtext',
+											id: $(this).parent().attr('id'),
 											msg: $(this).val(),
 										});
 		
 										$(this).parent().text($(this).val())
 										.css({
-											"width": ($(this).val().length + 2) * 8 + "px"
-											});											
+											'width': ($(this).val().length + 1) * 10 + 'px'
+											});
 		
 											$(input).blur().remove();
 									}
 		
 									if (e.keyCode == 27) {
-										$(this).parent().text($(this).val())
+										$(this).parent().text(text);
 										$(input).blur().remove();
 									}
 								})
