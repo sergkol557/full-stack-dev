@@ -1,8 +1,8 @@
 {
     "baloon2": {
-        "left": "417",
-        "top": "272",
-        "text": "asdasasdsadasd"
+        "left": "349",
+        "top": "335",
+        "text": "asdasasdd"
     },
     "baloon1": {
         "text": "13123",
@@ -20,13 +20,16 @@
         "top": "125"
     },
     "baloon5": {
-        "text": "asdd2131",
-        "left": "32",
-        "top": "197"
+        "text": "sadsadasdasda",
+        "left": "128",
+        "top": "181"
     },
     "baloon6": {
-        "text": "231223asdsadasdsadsadasdasdsaasdsadsadsadsadsadasdasdadasdas",
+        "text": "231223asdsadasdsadsadasdasdsaasdsadhgjhgjgjsadsadsadsadasdasdad55456645654645645654356464",
         "left": "0",
-        "top": "125"
+        "top": "121"
+    },
+    "baloon7": {
+        "text": "32as"
     }
 }
