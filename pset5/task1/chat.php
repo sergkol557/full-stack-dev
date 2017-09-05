@@ -2,9 +2,9 @@
 	if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 		$msg = $_POST['suggest'];
 		$name = $_COOKIE['login'];
-		define("smile1", "<img src=\"img/smile1.png\" class='smile'>");
-		define("smile2", "<img src=\"img/smile2.png\" class='smile'>");
-		$response = "";
+		define('smile1', "<img src=\"img/smile1.png\" class='smile'>");
+		define('smile2', "<img src=\"img/smile2.png\" class='smile'>");
+		$response = '';
 
 		if (!file_exists('msg.json')) {
 			file_put_contents('msg.json', '');
@@ -44,4 +44,13 @@
 
 		$json = json_encode($json, JSON_PRETTY_PRINT);
 		file_put_contents('msg.json',$json);
+	} else {
+
+		setcookie('usr_msg', 'you must authorize first');
+		$response = file_get_contents('index.html');
+		echo $response;
+
+
 	}
+
+
