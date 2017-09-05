@@ -2,14 +2,14 @@
 	if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 		$msg = $_POST['suggest'];
 		$name = $_COOKIE['login'];
-		define("smile1", "<img src=\"img/smile1.png\" class=\'smile\'>");
-		define("smile2", "<img src=\"img/smile2.png\" class=\'smile\'>");
-		$response = "";
+		define('smile1', "<img src=\"img/smile1.png\" class=\'smile\'>");
+		define('smile2', "<img src=\"img/smile2.png\" class=\'smile\'>");
+		$response = '';
 
-		$servername = "localhost";
-		$username = "user";
-		$password = "qweasdzxc";
-		$dbname = "EasyChat";
+		$servername = 'localhost';
+		$username = 'user';
+		$password = 'qweasdzxc';
+		$dbname = 'EasyChat';
    
 		$conn = new mysqli($servername, $username, $password, $dbname);
    
@@ -23,7 +23,7 @@
 			global $conn;
 			$answer = $conn->query($sql);			
 			if ($conn->connect_error) {
-				die("Error retrieve data: " . $conn->connect_error);
+				die('Error retrieve data: ' . $conn->connect_error);
 			} 
 			return $answer;
 		}
@@ -33,16 +33,15 @@
 			$sql_insert = "INSERT messages (timer, msg)
 			VALUES ( '$timer', '$message' )";
 			if (!$conn->query($sql_insert)) {
-				echo "Error insert data: " . $sql_insert . $conn->error;
+				echo 'Error insert data: ' . $sql_insert . $conn->error;
 			}
 		}
 
 		function deleteData ($timer) {
 			global $conn;
-			//DELETE FROM `EasyChat`.`users` WHERE `login`='a';
 			$sql_delete = "DELETE FROM messages WHERE timer = '$timer'";
 			if (!$conn->query($sql_delete)) {
-				echo "Error deleting record: " . $sql_delete . $conn->error;
+				echo 'Error deleting record: ' . $sql_delete . $conn->error;
 			}
 		}
 
@@ -79,11 +78,16 @@
 		$sql_response = retrieveData ();
 
 		while ($row = $sql_response -> fetch_assoc()) {
-			$response .= "<p>".$row['timer']." ". $row['msg']."</p>";
+			$response .= '<p>'.$row['timer'].' '. $row['msg'].'</p>';
 		}
 
 		echo $response;
 
 
 		$conn->close(); 
+	} else {
+
+		setcookie('usr_msg', 'you must authorize first');
+		$response = file_get_contents('index.html');
+		echo $response;
 	}
