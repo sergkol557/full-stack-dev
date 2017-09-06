@@ -1,11 +1,11 @@
 <?php
- if (isset($_POST['login']) && isset($_POST['pas'])) {
+if (isset($_POST['login']) && isset($_POST['pas'])) {
 	$login = $_POST['login'];
 	$pas = $_POST['pas'];
 
-	 if (!file_exists('users.json')) {
-		file_put_contents('users.json','');
-	 }
+	if (!file_exists('users.json')) {
+		file_put_contents('users.json', '');
+	}
 
 	$json = file_get_contents('users.json');
 	$json = json_decode($json, true);
@@ -30,6 +30,6 @@
 
 	$json = json_encode($json, JSON_PRETTY_PRINT);
 	file_put_contents('users.json', $json);
- }
+}
 
 
