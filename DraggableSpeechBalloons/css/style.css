@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	user-select: none;
 }
 
 .wrapper {
@@ -19,7 +20,7 @@ body {
 }
 
 .placeddiv {
-	height: 20px;
+	min-height: 20px;
 	background-color: white;
 	border-radius: 15px;
 	margin: 0;

@@ -1,38 +1,10 @@
 {
-    "baloon2": {
-        "left": "349",
-        "top": "335",
-        "text": "asdasasdd"
-    },
-    "baloon1": {
-        "text": "13123",
-        "left": "495",
-        "top": "171"
-    },
-    "baloon3": {
-        "text": "dsfd",
-        "left": "0",
-        "top": "396"
-    },
-    "baloon4": {
-        "text": "asda",
-        "left": "475",
-        "top": "125"
-    },
-    "baloon5": {
-        "text": "sadsadasdasda",
-        "left": "128",
-        "top": "181"
-    },
-    "baloon6": {
-        "text": "231223asdsadasdsadsadasdasdsaasdsadhgjhgjgjsadsadsadsadasdasdad55456645654645645654356464",
-        "left": "0",
-        "top": "93"
-    },
-    "baloon7": {
-        "text": "32as"
-    },
     "1": {
-        "text": "erwerw"
+        "text": "\u043f\u0440\u0438\u0432\u0435\u0442",
+        "left": "300",
+        "top": "183.60000610351562"
+    },
+    "2": {
+        "text": "34535"
     }
 }

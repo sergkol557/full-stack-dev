@@ -37,6 +37,17 @@ function addBaloon(e, id, left, top, text) {
 		var res_id = id ? id : baloons;
 		var width = text ? (text.length + 1) * 8 + 'px' : '100px';
 
+		if (parseInt(relX) + parseInt(width) > 600) {
+			relX = parseInt(relX) - parseInt(width);
+			relX += 'px';
+		}
+
+		if (parseInt(relY) + 20 > 450) {
+			relY = parseInt(relY) - 20;
+			relY += 'px';
+		}
+
+
 		$('#img').append($('<div>')
 			.addClass('placeddiv')
 			.attr('id', res_id)
@@ -83,10 +94,25 @@ function addBaloon(e, id, left, top, text) {
 											id: $(this).parent().attr('id'),
 											msg: $(this).val()
 										});
-
-									$(this).parent().text($(this).val())
+									var parent = $(this).parent();
+									var current_width = ($(this).val().length + 1) * 8 + 'px';
+									var parent_pos = parent.get(0).getBoundingClientRect();
+									var left_parent_position = parseInt(parent_pos.left);
+									if (parseInt(parent_pos.left) + parseInt(current_width) > 600) {
+										for (var i = 0; i < 600; i++) {
+											if (parseInt(parent_pos.left) + parseInt(current_width) - i < 600) {
+												left_parent_position = parseInt(parent_pos.left) - i;
+												break;
+											} else {
+												left_parent_position = 0;
+											}
+										}
+										left_parent_position += 'px';
+									}
+									parent.text($(this).val())
 										.css({
-											'width': ($(this).val().length + 1) * 8 + 'px'
+											'width': current_width,
+											'left': left_parent_position
 										});
 
 									$(input).blur().remove();
