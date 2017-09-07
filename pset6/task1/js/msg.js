@@ -4,8 +4,8 @@ $(document).ready(function () {
 
 	msg = msg.split('\+').join(' ');
 
-	if (msg){
-		alert (msg);
+	if (msg) {
+		alert(msg);
 	}
 
 });
