@@ -107,8 +107,9 @@ function addBaloon(e, id, left, top, text) {
 												left_parent_position = 0;
 											}
 										}
+										left_parent_position += 'px';
 									}
-									left_parent_position += 'px';
+
 									parent.text($(this).val())
 										.css({
 											'width': current_width,
