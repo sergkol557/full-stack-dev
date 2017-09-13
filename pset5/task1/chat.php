@@ -9,7 +9,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	if (!file_exists('msg.json')) {
 		file_put_contents('msg.json', '');
 	}
-
+	date_default_timezone_set('Europe/Kiev');
 	$json = file_get_contents('msg.json');
 	$json = json_decode($json, true);
 	$current_time = date('H:i:s');
@@ -47,8 +47,8 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 } else {
 
 	setcookie('usr_msg', 'you must authorize first');
-	$response = file_get_contents('index.html');
-	echo $response;
+	header("Location: index.html");
+	exit();
 
 
 }

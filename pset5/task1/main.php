@@ -30,6 +30,9 @@ if (isset($_POST['login']) && isset($_POST['pas'])) {
 
 	$json = json_encode($json, JSON_PRETTY_PRINT);
 	file_put_contents('users.json', $json);
+} else {
+	header("Location: index.html");
+	exit();
 }
 
 

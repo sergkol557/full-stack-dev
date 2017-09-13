@@ -3,9 +3,17 @@ $(document).ready(function () {
 	var msg = document.cookie.replace(/(?:(?:^|.*;\s*)usr_msg\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 
 	msg = msg.split('+').join(' ');
-
+	msg = decodeURI(msg);
 	if (msg) {
 		alert(msg);
+	}
+
+	var login = document.cookie.replace(/(?:(?:^|.*;\s*)login\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+	login = login.split('+').join(' ');
+	login = decodeURI(login);
+
+	if(!login){
+		location.href = 'index.html';
 	}
 
 	$('#go').click(function () {
