@@ -5,7 +5,10 @@ $(document).ready(function () {
 	msg = msg.split('\+').join(' ');
 	msg = decodeURI(msg);
 
+
+
 	if (msg) {
+		logChat('user receive msg - '+msg);
 		alert(msg);
 	}
 

@@ -1,18 +1,25 @@
 $(document).ready(function () {
 
-	var msg = document.cookie.replace(/(?:(?:^|.*;\s*)usr_msg\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+	var msg2 = document.cookie.replace(/(?:(?:^|.*;\s*)usr_msg\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 
-	msg = msg.split('+').join(' ');
-	msg = decodeURI(msg);
-	if (msg) {
-		alert(msg);
+	msg2 = msg2.split('+').join(' ');
+	msg2 = decodeURI(msg2);
+
+
+
+	if (msg2) {
+		logChat('user receive msg - '+msg2);
+		alert(msg2);
 	}
 
 	var login = document.cookie.replace(/(?:(?:^|.*;\s*)login\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 	login = login.split('+').join(' ');
 	login = decodeURI(login);
 
+
+
 	if(!login){
+		logChat('illegal user redirected from chat.html');
 		location.href = 'index.html';
 	}
 
@@ -37,9 +44,11 @@ function sendMessage(msg) {
 
 	$.post('chat.php', {suggest: html_coded}, function (result) {
 		if (msg) $("#text-msg").val('');
+		if(msg) logChat('user send msg - '+msg);
 
 		var $textarea = $('.textarea');
 		$textarea.html(result);
+		logChat('user retrieve message - ' + result);
 		$textarea.scrollTop($textarea.prop('scrollHeight'));
 	});
 }

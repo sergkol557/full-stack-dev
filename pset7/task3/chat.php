@@ -5,6 +5,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	define('smile1', '<img src=\'img/smile1.png\' class=\'smile\'>');
 	define('smile2', '<img src=\'img/smile2.png\' class=\'smile\'>');
 	$response = '';
+	require 'logger.php';
 
 	if (!file_exists('msg.json')) {
 		file_put_contents('msg.json', '');
@@ -39,13 +40,13 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	foreach ($json as $key => $value) {
 		$response .= "<p>[$key] $json[$key]</p>";
 	}
-
+	logChat("sent message to $name");
 	echo $response;
 
 	$json = json_encode($json, JSON_PRETTY_PRINT);
 	file_put_contents('msg.json', $json);
 } else {
-
+	logChat('user redirected from chat.php');
 	setcookie('usr_msg', 'you must authorize first');
 	header("Location: index.html");
 	exit();
