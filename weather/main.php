@@ -6,6 +6,7 @@ if (isset ($_GET['data'])) {
 	$data = $_GET['data'];
 
 	header('Content-type:application/json');
+
 	if ($data === 'database') {
 		echo getDataBase();
 	} elseif ($data === 'json') {

@@ -19,6 +19,7 @@ function getDataJson()
 		}
 		$index++;
 	}
+
 	return json_encode($data);
 }
 

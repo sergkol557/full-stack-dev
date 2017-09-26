@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	getData('json');
+
 	$('.js-sources').click(function () {
 		$('.active').removeClass('active');
 		var sourceButton = $(this);
@@ -9,10 +10,10 @@ $(document).ready(function () {
 	});
 
 	function getData(dataType) {
+
 		$.get('main.php?data=' + dataType, function (result) {
 			clearPage();
-
-			result = JSON.parse(result);
+			pushUrl(dataType);
 			var weatherList = '';
 			for (var key in result) {
 				var weatherInfo = result[key];
@@ -73,4 +74,8 @@ function clearPage() {
 	$('#forecast').html('');
 	$('#current_temperature').html('');
 	$('#date').html('');
+}
+
+function pushUrl(queryType) {
+	history.pushState({name:queryType}, '', '?data='+queryType);
 }
