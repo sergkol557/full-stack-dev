@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="weather application">
+	<title>Weather</title>
+	<link rel="stylesheet" href="styles/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Titillium+Web" rel="stylesheet">
+	<link rel='shortcut icon' type='image/x-icon' href='icons/favicon.ico'/>
+	<script src="scripts/jquery-3.2.1.min.js" defer></script>
+	<script src="scripts/app.js" defer></script>
+</head>
+<body>
+<header>
+	<h1>Modern weather app</h1>
+</header>
+<nav>
+	<div data-source="json" id="JSON_data" class="active js-sources">JSON</div>
+	<div data-source="database" id="DB_data" class="js-sources">Database</div>
+	<div data-source="api" id="API_data" class="js-sources">API</div>
+</nav>
+<main>
+	<div class="container">
+		<div class="now clearfix">
+			<div class="all-50" id="all_50">
+				<div class="date" id="date"></div>
+				<div class="current-temperature" id="current_temperature"></div>
+			</div>
+			<div class="all-50" align='center'>
+				<img id="cur_weather_img" height="100" src="">
+			</div>
+		</div>
+		<div class="forecast" id="forecast">
+		</div>
+	</div>
+</main>
+</body>
+</html>
