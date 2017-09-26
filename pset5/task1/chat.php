@@ -16,7 +16,10 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	$time1 = date_create($current_time);
 
 	if (!isset($json)) {
-		$json[0][$current_time] = '<b>admin:</b> welcome to Easy chat';
+		$json[0]['id'] = 0;
+		$json[0]['userID'] = 0;
+		$json[0]['time'] = date('U');
+		$json[0]['text'] = 'Welcome to Easy Chat';
 	}
 
 	//обрезание времени
@@ -29,8 +32,13 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 		}
 	}
 
+	$index = count($json);
+
 	if (!empty($msg)) {
-		$json[$current_time] = "<b>$name:</b> $msg";
+		$json[$index]['id'] = 0;
+		$json[$index]['userID'] = 0;
+		$json[$index]['time'] = date('U');
+		$json[$index ]['text'] = 'Welcome to Easy Chat';
 
 	}
 
@@ -44,13 +52,38 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 
 	$json = json_encode($json, JSON_PRETTY_PRINT);
 	file_put_contents('msg.json', $json);
+
 } else {
 
 	setcookie('usr_msg', 'you must authorize first');
 	header("Location: index.html");
 	exit();
+}
 
+function getUserID($usr_name){
+	$usr_json = file_get_contents('users.json');
+	$usr_json = json_decode($usr_json, true);
 
+	foreach ($usr_json as $value){
+		if($usr_name === $value['login']){
+			return $value['id'];
+		}
+	}
+
+	return -1;
+}
+
+function getUserName($usr_id){
+	$usr_json = file_get_contents('users.json');
+	$usr_json = json_decode($usr_json, true);
+
+	foreach ($usr_json as $value){
+		if($usr_id === $value['id']){
+			return $value['login'];
+		}
+	}
+
+	return -1;
 }
 
 
