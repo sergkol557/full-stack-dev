@@ -16,7 +16,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	$time1 = date_create($current_time);
 
 	if (!isset($json)) {
-		$json[$current_time] = '<b>admin:</b> welcome to Easy chat';
+		$json[0][$current_time] = '<b>admin:</b> welcome to Easy chat';
 	}
 
 	//обрезание времени
@@ -30,8 +30,6 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	}
 
 	if (!empty($msg)) {
-		$msg = str_replace(':)', smile1, $msg);
-		$msg = str_replace(':(', smile2, $msg);
 		$json[$current_time] = "<b>$name:</b> $msg";
 
 	}
@@ -39,6 +37,8 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	foreach ($json as $key => $value) {
 		$response .= "<p>[$key] $json[$key]</p>";
 	}
+	$response = str_replace(':)', smile1, $response);
+	$response = str_replace(':(', smile2, $response);
 
 	echo $response;
 

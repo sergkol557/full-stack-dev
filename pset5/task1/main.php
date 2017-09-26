@@ -10,12 +10,16 @@ if (isset($_POST['login']) && isset($_POST['pas'])) {
     $json = file_get_contents('users.json');
     $json = json_decode($json, true);
 
-    if (!isset($json[$login])) {
-        $json[$login] = $pas;
+    if (checkUser($login, $pas, $json) === -1) {
+    	$index = end($json);
+    	$index++;
+	    $json[$index]['id'] = $index;
+        $json[$index]['user'] = $login;
+	    $json[$index]['pas'] = $pas;
         $answer = file_get_contents('chat.html');
         setcookie('login', $login);
         setcookie('usr_msg', "Welcome $login");
-    } elseif ($json[$login] === $pas) {
+    } elseif (checkUser($login, $pas, $json)) {
         $answer = file_get_contents('chat.html');
         setcookie('login', $login);
         setcookie('usr_msg', '');
@@ -31,4 +35,16 @@ if (isset($_POST['login']) && isset($_POST['pas'])) {
 } else {
     header("Location: index.html");
     exit();
+}
+
+function checkUser($usr_login, $usr_pas, $users){
+	foreach ($users as $key=>$value){
+		if ($value['login'] === $usr_login && $value['pas'] === $usr_pas){
+			return 1;
+		} elseif ($value['login'] === $usr_login && $value['pas'] !== $usr_pas){
+			return 0;
+		}
+	}
+
+	return -1;
 }

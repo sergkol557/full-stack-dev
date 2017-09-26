@@ -1,11 +1,18 @@
 $(document).ready(function () {
+	
+	$('#msg__dialog-close').click(function () {
+		$('#msg__dialog').hide();
+	});
 
 	var msg = document.cookie.replace(/(?:(?:^|.*;\s*)usr_msg\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 
 	msg = msg.split('+').join(' ');
 	msg = decodeURI(msg);
 	if (msg) {
-		alert(msg);
+		var dialog = $('#msg__dialog');
+		dialog.find('p').text(msg);
+		dialog.show();
+		deleteCookie('usr_msg');
 	}
 
 	var login = document.cookie.replace(/(?:(?:^|.*;\s*)login\s*\=\s*([^;]*).*$)|^.*$/, '$1');
@@ -27,7 +34,7 @@ $(document).ready(function () {
 		}
 	});
 
-	setInterval(sendMessage(), 1000);
+	setInterval(sendMessage, 1000);
 
 });
 
@@ -42,4 +49,10 @@ function sendMessage(msg) {
 		$textarea.html(result);
 		$textarea.scrollTop($textarea.prop('scrollHeight'));
 	});
+}
+
+function deleteCookie(name) {
+	setCookie(name, "", {
+		expires: -1
+	})
 }
