@@ -12,8 +12,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	date_default_timezone_set('Europe/Kiev');
 	$json = file_get_contents('msg.json');
 	$json = json_decode($json, true);
-	$current_time = date('H:i:s');
-	$time1 = date_create($current_time);
+	$current_time = date('U');
 
 	if (!isset($json)) {
 		$json[0]['id'] = 0;
@@ -24,8 +23,9 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 
 	//обрезание времени
 	foreach ($json as $key => $value) {
-		$time2 = date_create($key);
-		$interval = date_diff($time1, $time2, true);
+		$time1 = date_create($current_time);
+		$time2 = date_create($value['time']);
+		$interval = date_diff($time2, $time1, true);
 
 		if ($interval->format('%h') > 1) {
 			unset($json[$key]);
@@ -35,15 +35,19 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	$index = count($json);
 
 	if (!empty($msg)) {
-		$json[$index]['id'] = 0;
-		$json[$index]['userID'] = 0;
-		$json[$index]['time'] = date('U');
-		$json[$index ]['text'] = 'Welcome to Easy Chat';
-
+		$json[$index]['id'] = $index;
+		$json[$index]['userID'] = getUserID($name);
+		$json[$index]['time'] = $current_time;
+		$json[$index ]['text'] = $msg;
 	}
 
 	foreach ($json as $key => $value) {
-		$response .= "<p>[$key] $json[$key]</p>";
+		$msg_time = date_create_from_format('U', $value['time']);
+		$msg_time->setTimezone(new DateTimeZone('Europe/Kiev'));
+		$msg_time = date_format($msg_time,'H:i:s');
+		$user_name = getUserName($value['userID']);
+		$msg_text = $value['text'];
+		$response .= "<p>[$msg_time] <b>$user_name</b>: $msg_text</p>";
 	}
 	$response = str_replace(':)', smile1, $response);
 	$response = str_replace(':(', smile2, $response);
