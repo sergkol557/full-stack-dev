@@ -31,7 +31,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	function insertData($timer, $message)
 	{
 		global $conn;
-		$sql_insert  = $conn->prepare("INSERT INTO messages (timer, msg) VALUES (?, ?, ?)");
+		$sql_insert  = $conn->prepare("INSERT INTO messages (timer, msg) VALUES (?, ?)");
 		$sql_insert->bind_param("ss", $timer, $message);
 		$sql_insert->execute();
 		$sql_insert->close();
