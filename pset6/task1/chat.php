@@ -1,17 +1,16 @@
 <?php
+
+require_once 'connectDB.php';
+
 if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	$msg = $_POST['suggest'];
 	$name = $_COOKIE['login'];
 	define('smile1', "<img src=\'img/smile1.png\' class=\"smile\">");
 	define('smile2', "<img src=\'img/smile2.png\' class=\"smile\">");
 	$response = '';
+	date_default_timezone_set('Europe/Kiev');
 
-	$servername = 'localhost';
-	$username = 'user';
-	$password = 'qweasdzxc';
-	$dbname = 'EasyChat';
-
-	$conn = new mysqli($servername, $username, $password, $dbname);
+	$conn = connectDB();
 
 	if ($conn->connect_error) {
 		die('Connection failed: ' . $conn->connect_error);
@@ -32,20 +31,19 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	function insertData($timer, $message)
 	{
 		global $conn;
-		$sql_insert = "INSERT messages (timer, msg)
-			VALUES ( '$timer', '$message' )";
-		if (!$conn->query($sql_insert)) {
-			echo 'Error insert data: ' . $sql_insert . $conn->error;
-		}
+		$sql_insert  = $conn->prepare("INSERT INTO messages (timer, msg) VALUES (?, ?, ?)");
+		$sql_insert->bind_param("ss", $timer, $message);
+		$sql_insert->execute();
+		$sql_insert->close();
 	}
 
 	function deleteData($timer)
 	{
 		global $conn;
+		$sql_insert  = $conn->prepare("DELETE FROM messages WHERE timer = '?'");
+		$sql_insert->bind_param("s", $timer);
+		$sql_insert->execute();
 		$sql_delete = "DELETE FROM messages WHERE timer = '$timer'";
-		if (!$conn->query($sql_delete)) {
-			echo 'Error deleting record: ' . $sql_delete . $conn->error;
-		}
 	}
 
 	$sql_response = retrieveData();
@@ -72,8 +70,6 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	$sql_response = retrieveData();
 
 	if (!empty($msg)) {
-		$msg = str_replace(":)", smile1, $msg);
-		$msg = str_replace(":(", smile2, $msg);
 
 		insertData($current_time, "<b>$name:</b> $msg");
 	}
@@ -84,8 +80,10 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 		$response .= '<p>' . $row['timer'] . ' ' . $row['msg'] . '</p>';
 	}
 
-	echo $response;
+	$msg = str_replace(":)", smile1, $msg);
+	$msg = str_replace(":(", smile2, $msg);
 
+	echo $response;
 
 	$conn->close();
 } else {
