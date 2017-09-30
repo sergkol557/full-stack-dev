@@ -16,6 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `messages`
+--
+
+DROP TABLE IF EXISTS `messages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `messages` (
+  `timer` tinytext NOT NULL,
+  `msg` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `messages`
+--
+
+LOCK TABLES `messages` WRITE;
+/*!40000 ALTER TABLE `messages` DISABLE KEYS */;
+INSERT INTO `messages` VALUES ('20:32:04','<b>admin:</b> welcome to Easy chat'),('20:32:17','<b>11:</b> hi all'),('20:43:12','<b>11:</b> ^)'),('20:55:11','<b>11:</b> ^('),('20:56:21','<b>11:</b> <img src=\'img/smile1.png\' class=\"smile\">'),('20:57:20','<b>11:</b> <img src=\'img/smile2.png\' class=\"smile\">'),('21:36:04','<b>11:</b> :)'),('21:38:05','<b>11:</b> :(');
+/*!40000 ALTER TABLE `messages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -23,7 +46,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `login` varchar(256) NOT NULL,
+  `login` varchar(56) NOT NULL,
   `pas` tinytext NOT NULL,
   UNIQUE KEY `login_UNIQUE` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -48,4 +71,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-03  9:48:11
+-- Dump completed on 2017-09-30 10:53:26

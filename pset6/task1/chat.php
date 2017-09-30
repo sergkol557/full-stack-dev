@@ -5,8 +5,8 @@ require_once 'connectDB.php';
 if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	$msg = $_POST['suggest'];
 	$name = $_COOKIE['login'];
-	define('smile1', "<img src=\'img/smile1.png\' class=\"smile\">");
-	define('smile2', "<img src=\'img/smile2.png\' class=\"smile\">");
+	define('smile1', "<img src='img/smile1.png' class='smile'>");
+	define('smile2', "<img src='img/smile2.png' class='smile''>");
 	$response = '';
 	date_default_timezone_set('Europe/Kiev');
 
@@ -43,7 +43,6 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 		$sql_insert  = $conn->prepare("DELETE FROM messages WHERE timer = '?'");
 		$sql_insert->bind_param("s", $timer);
 		$sql_insert->execute();
-		$sql_delete = "DELETE FROM messages WHERE timer = '$timer'";
 	}
 
 	$sql_response = retrieveData();
@@ -80,8 +79,8 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 		$response .= '<p>' . $row['timer'] . ' ' . $row['msg'] . '</p>';
 	}
 
-	$msg = str_replace(":)", smile1, $msg);
-	$msg = str_replace(":(", smile2, $msg);
+	$response = str_replace(":)", smile1, $response);
+	$response = str_replace(":(", smile2, $response);
 
 	echo $response;
 
