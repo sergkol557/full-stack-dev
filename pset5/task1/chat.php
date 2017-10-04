@@ -23,7 +23,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 
 	//обрезание времени
 	foreach ($json as $key => $value) {
-		$time1 = date_create($current_time);
+		$time1 = new DateTime();
 		$time2 = date_create_from_format('U', $value['time']);
 		$time2->setTimezone(new DateTimeZone('Europe/Kiev'));
 		$interval = date_diff($time2, $time1, true);
