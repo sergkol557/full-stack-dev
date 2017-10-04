@@ -6,7 +6,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	$msg = $_POST['suggest'];
 	$name = $_COOKIE['login'];
 	define('smile1', "<img src='img/smile1.png' class='smile'>");
-	define('smile2', "<img src='img/smile2.png' class='smile''>");
+	define('smile2', "<img src='img/smile2.png' class='smile'>");
 	$response = '';
 	date_default_timezone_set('Europe/Kiev');
 
