@@ -40,7 +40,7 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	function deleteData($timer)
 	{
 		global $conn;
-		$sql_insert  = $conn->prepare("DELETE FROM messages WHERE timer = '?'");
+		$sql_insert  = $conn->prepare("DELETE FROM messages WHERE timer = `?`");
 		$sql_insert->bind_param('s', $timer);
 		$sql_insert->execute();
 	}
