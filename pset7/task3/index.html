@@ -7,9 +7,9 @@
 	<title>Easy Chat</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js" defer></script>
 	<script src="js/logger.js"></script>
-	<script src="js/msg.js"></script>
+	<script src="js/msg.js" defer></script>
 </head>
 <body>
 <div class="wrapper">
@@ -38,12 +38,19 @@
 					<p><input type="password" name="pas" required placeholder="****" class="input"></p>
 					<p>
 						<button type="submit">Submit</button>
-					<div class="shadow"></div>
+						<div class="shadow"></div>
 					</p>
 				</form>
 			</div>
 		</div>
 	</div>
+	<div>
+		<dialog id ="msg__dialog">
+			<p></p>
+			<button id="msg__dialog-close">Закрыть</button>
+		</dialog>
+	</div>
 </div>
+
 </body>
 </html>

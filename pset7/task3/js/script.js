@@ -1,15 +1,20 @@
 $(document).ready(function () {
 
-	var msg2 = document.cookie.replace(/(?:(?:^|.*;\s*)usr_msg\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+	$('#msg__dialog-close').click(function () {
+		$('#msg__dialog').hide();
+	});
 
-	msg2 = msg2.split('+').join(' ');
-	msg2 = decodeURI(msg2);
+	var msg = document.cookie.replace(/(?:(?:^|.*;\s*)usr_msg\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 
+	msg = msg.split('+').join(' ');
+	msg = decodeURI(msg);
 
-
-	if (msg2) {
-		logChat('user receive msg - '+msg2);
-		alert(msg2);
+	if (msg) {
+		logChat('user receive msg - '+msg);
+		var dialog = $('#msg__dialog');
+		dialog.find('p').text(msg);
+		dialog.show();
+		deleteCookie('usr_msg');
 	}
 
 	var login = document.cookie.replace(/(?:(?:^|.*;\s*)login\s*\=\s*([^;]*).*$)|^.*$/, '$1');
@@ -34,7 +39,7 @@ $(document).ready(function () {
 		}
 	});
 
-	setInterval(sendMessage(), 1000);
+	setInterval(sendMessage, 1000);
 
 });
 
@@ -44,11 +49,13 @@ function sendMessage(msg) {
 
 	$.post('chat.php', {suggest: html_coded}, function (result) {
 		if (msg) $("#text-msg").val('');
-		if(msg) logChat('user send msg - '+msg);
 
 		var $textarea = $('.textarea');
 		$textarea.html(result);
-		logChat('user retrieve message - ' + result);
 		$textarea.scrollTop($textarea.prop('scrollHeight'));
 	});
+}
+
+function deleteCookie(name) {
+	document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }

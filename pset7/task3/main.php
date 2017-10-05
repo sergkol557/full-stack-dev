@@ -40,5 +40,3 @@ if (isset($_POST['login']) && isset($_POST['pas'])) {
 	header("Location: index.html");
 	exit();
 }
-
-

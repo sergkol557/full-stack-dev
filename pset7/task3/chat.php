@@ -50,8 +50,6 @@ if (isset($_POST['suggest']) && isset($_COOKIE['login'])) {
 	setcookie('usr_msg', 'you must authorize first');
 	header("Location: index.html");
 	exit();
-
-
 }
 
 
