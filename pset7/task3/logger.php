@@ -8,7 +8,11 @@
 			file_put_contents('log.txt', '');
 		}
 
-		$current_text = file_get_contents('log.txt');
-		$current_text .= "$current_time - $text \n";
-		file_put_contents('log.txt',$current_text);
+		$fd = fopen('log.txt', 'r+');
+		if (flock($fd, LOCK_EX)){
+			fseek($fd, 0, SEEK_END);
+			fwrite($fd, "$current_time - $text \r\n");
+			flock($fd, LOCK_UN);
+		}
+		fclose($fd);
 	}
