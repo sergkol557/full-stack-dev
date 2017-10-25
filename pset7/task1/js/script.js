@@ -7,7 +7,7 @@ var time_reg = new RegExp('^([0-1]\\d|2[0-3])(:[0-5]\\d){2}$', 'i');
 $(document).ready(function () {
 
     $('button').click(function (event) {
-        var id = event.target.id;
+        var id = event.target.previousElementSibling.id;
         if (validateField(id)) {
             console.log('js check ' + id + 'successfully');
             $.post("validation.php",
@@ -29,7 +29,6 @@ function validateField(field) {
         return false;
     }
 
-    var check_field = field_value.match(field + '_reg');
-
+    var check_field = field_value.match(eval(field + '_reg'));
     return check_field[0] === field_value;
 }
