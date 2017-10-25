@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 
-form {
+.container {
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,16 @@ form {
     align-items: stretch;
 }
 
+p{
+    padding: 0;
+    margin: 0;
+}
+
 input {
     margin: 10px 0;
     padding-left: 5px;
+}
+
+button{
+    width: 100px;
 }

@@ -3,10 +3,7 @@
 	src: url('fonts/BLACKJAR.ttf') format('ttf');
 }
 
-body {
-	margin: 0;
-	padding: 0;
-}
+
 
 .wrapper {
 
@@ -14,27 +11,27 @@ body {
 
 header {
 	width: 100%;
-	background: url("../img/iphone.png") no-repeat 30% 100%,
-					url("../img/blue-pattern.jpg");
-	height: 1040px;
-	min-height: 1040px;
+	background: url("../img/iphone.png") no-repeat 22% 174%,
+				url("../img/blue-pattern.jpg");
+	height: 770px;
 }
 .header-container {
-	width: 1394px;
+	width: 100%;
 	margin: 0 auto;
 
 }
 
 .symbol {
-	top: 0px;
-	left: 0px;
+	position: relative;
+	top: 10%;
+	left: 13%;
 	color: deepskyblue;
 	text-align: center;
 	vertical-align: middle;
 	background-color: white;
-	width: 160px;
-	height: 160px;
-	font-size: 5rem;
+	width: 100px;
+	height: 100px;
+	font-size: 3rem;
 	font-family: 'Kaushan Script', cursive;
 	border-bottom: deepskyblue solid 1px;
 	border-right: deepskyblue solid 1px;
@@ -42,7 +39,7 @@ header {
 }
 
 .symbol_top{
-	padding-top: 19px;
+	padding-top: 14px;
 }
 
 .header_content{

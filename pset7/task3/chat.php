@@ -100,4 +100,3 @@ function getUserName($usr_id)
     return -1;
 }
 
-
