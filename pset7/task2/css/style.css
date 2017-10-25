@@ -1,38 +1,39 @@
-body{
-	margin: 0;
-	padding: 0;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
-	margin-top: 10%;
-	background-color: aliceblue;
+    margin-top: 10%;
+    background-color: aliceblue;
 }
+
 .form {
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: stretch;
-	width: 500px;	
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 500px;
 }
 
 .input__wrapper {
-	padding-top: 20px;	
+    padding-top: 20px;
 }
 
 .textarea {
-	height: 300px;
-	overflow: auto;
-	background-color: rgba(2, 52, 24, 0.99);
-	color: white;
-	padding: 5px;
+    height: 300px;
+    overflow: auto;
+    background-color: rgba(2, 52, 24, 0.99);
+    color: white;
+    padding: 5px;
 }
 
 input {
-	width: 70%;
+    width: 70%;
 }
 
 button {
-	margin-left: 17px;
-	width: 25%;
+    margin-left: 17px;
+    width: 25%;
 }

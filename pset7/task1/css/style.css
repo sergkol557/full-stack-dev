@@ -1,22 +1,24 @@
-body{
-	margin: 0;
-	padding: 0;
-}
-.wrapper{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-form{
-	width: 300px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: stretch;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
 input {
-	margin: 10px 0;
-	padding-left: 5px;
+    margin: 10px 0;
+    padding-left: 5px;
 }
